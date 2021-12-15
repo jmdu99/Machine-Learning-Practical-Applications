@@ -1,0 +1,100 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                         Class
+Variable              Positive
+==============================
+Age                    -3.7864
+Gender                  4.3512
+Polyuria                4.4395
+Polydipsia              5.0704
+sudden weight loss      0.1903
+weakness                0.8171
+Polyphagia              1.1938
+Genital thrush          1.8636
+visual blurring         0.9159
+Itching                -2.8029
+Irritability            2.3407
+delayed healing        -0.3916
+partial paresis         1.1593
+muscle stiffness       -0.7288
+Alopecia                0.1504
+Obesity                 -0.289
+Intercept              -2.4233
+
+
+Odds Ratios...
+                         Class
+Variable              Positive
+==============================
+Age                     0.0227
+Gender                 77.5694
+Polyuria               84.7348
+Polydipsia            159.2423
+sudden weight loss      1.2096
+weakness                2.2638
+Polyphagia              3.2995
+Genital thrush          6.4471
+visual blurring          2.499
+Itching                 0.0606
+Irritability           10.3888
+delayed healing         0.6759
+partial paresis         3.1877
+muscle stiffness        0.4825
+Alopecia                1.1623
+Obesity                  0.749
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         480               92.3077 %
+Incorrectly Classified Instances        40                7.6923 %
+Kappa statistic                          0.8378
+Mean absolute error                      0.1114
+Root mean squared error                  0.2521
+Relative absolute error                 23.5292 %
+Root relative squared error             51.815  %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,934    0,095    0,940      0,934    0,937      0,838    0,969     0,983     Positive
+                 0,905    0,066    0,896      0,905    0,900      0,838    0,969     0,939     Negative
+Weighted Avg.    0,923    0,084    0,923      0,923    0,923      0,838    0,969     0,966     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 299  21 |   a = Positive
+  19 181 |   b = Negative
+

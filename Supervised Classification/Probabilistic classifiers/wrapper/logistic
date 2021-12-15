@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.functions.Logistic -F 3 -T 0.01 -R 1 -E DEFAULT -- -R 1.0E-8 -M -1 -num-decimal-places 4-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   8
+              Gender
+              Polyuria
+              Polydipsia
+              weakness
+              Irritability
+              delayed healing
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                      Class
+Variable           Positive
+===========================
+Gender               3.5926
+Polyuria              3.984
+Polydipsia           3.6031
+weakness             0.4864
+Irritability         2.1244
+delayed healing     -1.1234
+Alopecia            -0.7139
+Intercept           -2.6777
+
+
+Odds Ratios...
+                      Class
+Variable           Positive
+===========================
+Gender              36.3267
+Polyuria            53.7332
+Polydipsia          36.7113
+weakness             1.6265
+Irritability          8.368
+delayed healing      0.3252
+Alopecia             0.4897
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         479               92.1154 %
+Incorrectly Classified Instances        41                7.8846 %
+Kappa statistic                          0.833 
+Mean absolute error                      0.1339
+Root mean squared error                  0.2656
+Relative absolute error                 28.2822 %
+Root relative squared error             54.5869 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,941    0,110    0,932      0,941    0,936      0,833    0,960     0,978     Positive
+                 0,890    0,059    0,904      0,890    0,897      0,833    0,960     0,907     Negative
+Weighted Avg.    0,921    0,091    0,921      0,921    0,921      0,833    0,960     0,951     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 301  19 |   a = Positive
+  22 178 |   b = Negative
+

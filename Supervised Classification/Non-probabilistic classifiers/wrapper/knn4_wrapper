@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 4 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.lazy.IBk -F 3 -T 0.05 -R 1 -E DEFAULT -- -K 200 -W 0 -X -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""-Sweka.attributeSelection.GreedyStepwise -T -1.7976931348623157E308 -N -1 -num-slots 1
+Instances:    520
+Attributes:   13
+              Age
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              Genital thrush=Yes
+              visual blurring=Yes
+              Irritability=Yes
+              delayed healing=No
+              partial paresis=Yes
+              muscle stiffness=No
+              Alopecia=No
+              Obesity=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 4 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         486               93.4615 %
+Incorrectly Classified Instances        34                6.5385 %
+Kappa statistic                          0.8644
+Mean absolute error                      0.0624
+Root mean squared error                  0.2042
+Relative absolute error                 13.1748 %
+Root relative squared error             41.9751 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,916    0,035    0,977      0,916    0,945      0,867    0,988     0,991     Positive
+                 0,965    0,084    0,877      0,965    0,919      0,867    0,988     0,978     Negative
+Weighted Avg.    0,935    0,054    0,938      0,935    0,935      0,867    0,988     0,986     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 293  27 |   a = Positive
+   7 193 |   b = Negative
+

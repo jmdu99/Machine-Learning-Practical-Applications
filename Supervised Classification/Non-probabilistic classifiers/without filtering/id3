@@ -1,0 +1,130 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.Id3 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Discretize-F-B2-M-1.0-Rfirst-last-precision6
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Id3
+
+
+Polyuria = No
+|  Gender = Male
+|  |  Polydipsia = Yes
+|  |  |  Irritability = No
+|  |  |  |  muscle stiffness = Yes
+|  |  |  |  |  visual blurring = No: Positive
+|  |  |  |  |  visual blurring = Yes: Negative
+|  |  |  |  muscle stiffness = No
+|  |  |  |  |  Age = '(-inf-47.5]': Positive
+|  |  |  |  |  Age = '(47.5-inf)'
+|  |  |  |  |  |  sudden weight loss = No: Negative
+|  |  |  |  |  |  sudden weight loss = Yes: Positive
+|  |  |  Irritability = Yes: Positive
+|  |  Polydipsia = No
+|  |  |  Irritability = No
+|  |  |  |  weakness = Yes
+|  |  |  |  |  Itching = Yes
+|  |  |  |  |  |  Alopecia = Yes: Negative
+|  |  |  |  |  |  Alopecia = No
+|  |  |  |  |  |  |  Age = '(-inf-47.5]': Positive
+|  |  |  |  |  |  |  Age = '(47.5-inf)': Negative
+|  |  |  |  |  Itching = No
+|  |  |  |  |  |  Alopecia = Yes
+|  |  |  |  |  |  |  sudden weight loss = No: Positive
+|  |  |  |  |  |  |  sudden weight loss = Yes: Negative
+|  |  |  |  |  |  Alopecia = No: Negative
+|  |  |  |  weakness = No
+|  |  |  |  |  partial paresis = No: Negative
+|  |  |  |  |  partial paresis = Yes: Positive
+|  |  |  Irritability = Yes
+|  |  |  |  Genital thrush = No
+|  |  |  |  |  Polyphagia = No: Negative
+|  |  |  |  |  Polyphagia = Yes
+|  |  |  |  |  |  Age = '(-inf-47.5]': Positive
+|  |  |  |  |  |  Age = '(47.5-inf)': Negative
+|  |  |  |  Genital thrush = Yes: Positive
+|  Gender = Female
+|  |  Alopecia = Yes
+|  |  |  delayed healing = Yes: Negative
+|  |  |  delayed healing = No: Positive
+|  |  Alopecia = No
+|  |  |  visual blurring = No
+|  |  |  |  muscle stiffness = Yes: Positive
+|  |  |  |  muscle stiffness = No
+|  |  |  |  |  Age = '(-inf-47.5]'
+|  |  |  |  |  |  Irritability = No
+|  |  |  |  |  |  |  weakness = Yes: Positive
+|  |  |  |  |  |  |  weakness = No
+|  |  |  |  |  |  |  |  sudden weight loss = No
+|  |  |  |  |  |  |  |  |  Polyphagia = No
+|  |  |  |  |  |  |  |  |  |  Obesity = Yes: Positive
+|  |  |  |  |  |  |  |  |  |  Obesity = No: Positive
+|  |  |  |  |  |  |  |  |  Polyphagia = Yes: Negative
+|  |  |  |  |  |  |  |  sudden weight loss = Yes: Negative
+|  |  |  |  |  |  Irritability = Yes: Negative
+|  |  |  |  |  Age = '(47.5-inf)': Positive
+|  |  |  visual blurring = Yes: Positive
+Polyuria = Yes
+|  Polydipsia = Yes: Positive
+|  Polydipsia = No
+|  |  Itching = Yes
+|  |  |  delayed healing = Yes
+|  |  |  |  Alopecia = Yes
+|  |  |  |  |  Gender = Male
+|  |  |  |  |  |  Age = '(-inf-47.5]'
+|  |  |  |  |  |  |  sudden weight loss = No: Positive
+|  |  |  |  |  |  |  sudden weight loss = Yes: Negative
+|  |  |  |  |  |  Age = '(47.5-inf)': Negative
+|  |  |  |  |  Gender = Female: Positive
+|  |  |  |  Alopecia = No: Positive
+|  |  |  delayed healing = No: Positive
+|  |  Itching = No: Positive
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         496               95.3846 %
+Incorrectly Classified Instances        24                4.6154 %
+Kappa statistic                          0.9025
+Mean absolute error                      0.0489
+Root mean squared error                  0.2111
+Relative absolute error                 10.3279 %
+Root relative squared error             43.3917 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,963    0,060    0,963      0,963    0,963      0,903    0,960     0,961     Positive
+                 0,940    0,038    0,940      0,940    0,940      0,903    0,960     0,917     Negative
+Weighted Avg.    0,954    0,051    0,954      0,954    0,954      0,903    0,960     0,944     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 308  12 |   a = Positive
+  12 188 |   b = Negative
+

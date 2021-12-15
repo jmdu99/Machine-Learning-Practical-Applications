@@ -1,0 +1,340 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.LMT -F 3 -T 0.01 -R 1 -E DEFAULT -- -I -1 -M 15 -W 0.0-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   12
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              Genital thrush
+              visual blurring
+              Irritability
+              delayed healing
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Polyuria <= 0
+|   Polydipsia <= 0
+|   |   Gender <= 0
+|   |   |   Irritability <= 0
+|   |   |   |   muscle stiffness <= 0
+|   |   |   |   |   delayed healing <= 0: LM_1:14/98 (87)
+|   |   |   |   |   delayed healing > 0: LM_2:14/98 (31)
+|   |   |   |   muscle stiffness > 0: LM_3:14/84 (35)
+|   |   |   Irritability > 0: LM_4:14/70 (18)
+|   |   Gender > 0
+|   |   |   Alopecia <= 0: LM_5:14/70 (37)
+|   |   |   Alopecia > 0: LM_6:14/70 (14)
+|   Polydipsia > 0
+|   |   Irritability <= 0: LM_7:14/56 (22)
+|   |   Irritability > 0: LM_8:14/56 (18)
+Polyuria > 0: LM_9:14/28 (258)
+
+Number of Leaves  : 	9
+
+Size of the Tree : 	17
+
+
+
+
+
+
+LM_1:
+Class Positive :
+-7.77 + 
+[Age] * -5.67 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * -0.29 +
+[visual blurring] * 18.43 +
+[Irritability] * 1.52 +
+[delayed healing] * 1.43 +
+[muscle stiffness] * -3.54 +
+[Alopecia] * 0.58 +
+[Obesity] * -0.49
+
+Class Negative :
+7.77 + 
+[Age] * 5.67 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * 0.29 +
+[visual blurring] * -18.43 +
+[Irritability] * -1.52 +
+[delayed healing] * -1.43 +
+[muscle stiffness] * 3.54 +
+[Alopecia] * -0.58 +
+[Obesity] * 0.49
+
+LM_2:
+Class Positive :
+20.87 + 
+[Age] * -48.94 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * -1.01 +
+[visual blurring] * 3.65 +
+[Irritability] * 1.52 +
+[delayed healing] * 1.43 +
+[muscle stiffness] * -3.54 +
+[Alopecia] * -6.22 +
+[Obesity] * -0.49
+
+Class Negative :
+-20.87 + 
+[Age] * 48.94 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * 1.01 +
+[visual blurring] * -3.65 +
+[Irritability] * -1.52 +
+[delayed healing] * -1.43 +
+[muscle stiffness] * 3.54 +
+[Alopecia] * 6.22 +
+[Obesity] * 0.49
+
+LM_3:
+Class Positive :
+-8.37 + 
+[Age] * -2.83 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * -0.03 +
+[visual blurring] * 2.51 +
+[Irritability] * 1.52 +
+[delayed healing] * 0.83 +
+[muscle stiffness] * -3.54 +
+[Alopecia] * 0.58 +
+[Obesity] * -0.49
+
+Class Negative :
+8.37 + 
+[Age] * 2.83 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * 0.03 +
+[visual blurring] * -2.51 +
+[Irritability] * -1.52 +
+[delayed healing] * -0.83 +
+[muscle stiffness] * 3.54 +
+[Alopecia] * -0.58 +
+[Obesity] * 0.49
+
+LM_4:
+Class Positive :
+1.02 + 
+[Age] * -13.7 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * 3.95 +
+[visual blurring] * 0.61 +
+[Irritability] * 1.52 +
+[delayed healing] * 0.05 +
+[muscle stiffness] * 3.93 +
+[Alopecia] * -0.09 +
+[Obesity] * 0.04
+
+Class Negative :
+-1.02 + 
+[Age] * 13.7 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * -3.95 +
+[visual blurring] * -0.61 +
+[Irritability] * -1.52 +
+[delayed healing] * -0.05 +
+[muscle stiffness] * -3.93 +
+[Alopecia] * 0.09 +
+[Obesity] * -0.04
+
+
+LM_5:
+Class Positive :
+-14.71 + 
+[Age] * 52.61 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * 0.78 +
+[visual blurring] * 3.95 +
+[Irritability] * -2.26 +
+[delayed healing] * -2.31 +
+[muscle stiffness] * 2.07 +
+[Alopecia] * -2.17 +
+[Obesity] * -0.1
+
+Class Negative :
+14.71 + 
+[Age] * -52.61 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * -0.78 +
+[visual blurring] * -3.95 +
+[Irritability] * 2.26 +
+[delayed healing] * 2.31 +
+[muscle stiffness] * -2.07 +
+[Alopecia] * 2.17 +
+[Obesity] * 0.1 
+
+LM_6:
+Class Positive :
+5.61 + 
+[Age] * 2.52 +
+[Gender] * 1.75 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * 0.78 +
+[visual blurring] * 2.1  +
+[Irritability] * -1.59 +
+[delayed healing] * -17.01 +
+[muscle stiffness] * 0.34 +
+[Alopecia] * -2.17 +
+[Obesity] * -0.1
+
+Class Negative :
+-5.61 + 
+[Age] * -2.52 +
+[Gender] * -1.75 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * -0.78 +
+[visual blurring] * -2.1 +
+[Irritability] * 1.59 +
+[delayed healing] * 17.01 +
+[muscle stiffness] * -0.34 +
+[Alopecia] * 2.17 +
+[Obesity] * 0.1 
+
+
+LM_7:
+Class Positive :
+1.48 + 
+[Age] * -7.88 +
+[Gender] * 3.55 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * 2.39 +
+[visual blurring] * -0.43 +
+[Irritability] * 2.44 +
+[delayed healing] * 0.14 +
+[muscle stiffness] * -2.47 +
+[Alopecia] * 3.15 +
+[Obesity] * -0.15
+
+Class Negative :
+-1.48 + 
+[Age] * 7.88 +
+[Gender] * -3.55 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * -2.39 +
+[visual blurring] * 0.43 +
+[Irritability] * -2.44 +
+[delayed healing] * -0.14 +
+[muscle stiffness] * 2.47 +
+[Alopecia] * -3.15 +
+[Obesity] * 0.15
+
+LM_8:
+Class Positive :
+6.99 + 
+[Age] * -3.74 +
+[Gender] * 2.96 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 1.62 +
+[Genital thrush] * 1.27 +
+[visual blurring] * -0.43 +
+[Irritability] * 2.44 +
+[delayed healing] * 0.47 +
+[muscle stiffness] * -1.6 +
+[Alopecia] * 1.59 +
+[Obesity] * 0.22
+
+Class Negative :
+-6.99 + 
+[Age] * 3.74 +
+[Gender] * -2.96 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -1.62 +
+[Genital thrush] * -1.27 +
+[visual blurring] * 0.43 +
+[Irritability] * -2.44 +
+[delayed healing] * -0.47 +
+[muscle stiffness] * 1.6  +
+[Alopecia] * -1.59 +
+[Obesity] * -0.22
+
+LM_9:
+Class Positive :
+4.01 + 
+[Age] * -2.64 +
+[Gender] * 2.19 +
+[Polyuria] * 1.64 +
+[Polydipsia] * 3.09 +
+[Genital thrush] * 0.4  +
+[visual blurring] * -0.54 +
+[Irritability] * 1.42 +
+[delayed healing] * -2.41 +
+[Alopecia] * -1.69 +
+[Obesity] * -2.17
+
+Class Negative :
+-4.01 + 
+[Age] * 2.64 +
+[Gender] * -2.19 +
+[Polyuria] * -1.64 +
+[Polydipsia] * -3.09 +
+[Genital thrush] * -0.4 +
+[visual blurring] * 0.54 +
+[Irritability] * -1.42 +
+[delayed healing] * 2.41 +
+[Alopecia] * 1.69 +
+[Obesity] * 2.17
+
+
+Time taken to build model: 0.28 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         510               98.0769 %
+Incorrectly Classified Instances        10                1.9231 %
+Kappa statistic                          0.9595
+Mean absolute error                      0.0313
+Root mean squared error                  0.1262
+Relative absolute error                  6.6077 %
+Root relative squared error             25.9409 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,978    0,015    0,991      0,978    0,984      0,960    0,991     0,994     Positive
+                 0,985    0,022    0,966      0,985    0,975      0,960    0,991     0,978     Negative
+Weighted Avg.    0,981    0,018    0,981      0,981    0,981      0,960    0,991     0,988     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 313   7 |   a = Positive
+   3 197 |   b = Negative
+

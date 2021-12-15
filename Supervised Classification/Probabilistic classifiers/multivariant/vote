@@ -1,0 +1,196 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Vote -S 1 -B "weka.classifiers.functions.LDA -R 1.0E-6" -B "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4" -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5" -R AVG
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Vote combines the probability distributions of these base learners:
+	weka.classifiers.functions.LDA -R 1.0E-6
+	weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+	weka.classifiers.bayes.NaiveBayes 
+	weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+using the 'Average' combination rule 
+
+All the models:
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: -0.03940432870017929
+
+Mean vector:
+
+         6                   6
+         1  3,692307692308e-01
+         2  4,961538461538e-01
+         3  4,480769230769e-01
+         4  4,173076923077e-01
+         5  2,423076923077e-01
+         6  4,307692307692e-01
+
+Inverse of covariance matrix:
+
+  5,78  0,72  0,01 -0,65  0,87 -1,06
+  0,72  8,50 -1,85 -1,34 -0,24 -1,24
+  0,01 -1,85  8,00 -0,75  0,04 -1,18
+ -0,65 -1,34 -0,75  5,53 -0,09  0,01
+  0,87 -0,24  0,04 -0,09  6,13 -0,24
+ -1,06 -1,24 -1,18  0,01 -0,24  5,67
+
+
+
+Estimates for class value Positive
+
+Natural logarithm of class prior probability: -0.49
+Class prior probability: 0.62
+
+Mean vector:
+
+Gender: 0.54
+Polyuria: 0.76
+Polydipsia: 0.7
+sudden weight loss: 0.59
+Irritability: 0.34
+partial paresis: 0.6
+
+Estimates for class value Negative
+
+Natural logarithm of class prior probability: -0.96
+Class prior probability: 0.38
+
+Mean vector:
+
+Gender: 0.1
+Polyuria: 0.07
+Polydipsia: 0.04
+sudden weight loss: 0.15
+Irritability: 0.08
+partial paresis: 0.16
+
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                         Class
+Variable              Positive
+==============================
+Gender                  3.4871
+Polyuria                2.9365
+Polydipsia              3.5534
+sudden weight loss      0.9661
+Irritability            2.0809
+partial paresis         0.7068
+Intercept              -3.3891
+
+
+Odds Ratios...
+                         Class
+Variable              Positive
+==============================
+Gender                 32.6914
+Polyuria                18.849
+Polydipsia             34.9311
+sudden weight loss      2.6276
+Irritability            8.0117
+partial paresis         2.0275
+
+Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.61)   (0.39)
+=======================================
+Gender
+  mean                  0.5406    0.095
+  std. dev.             0.4983   0.2932
+  weight sum               320      200
+  precision                  1        1
+
+Polyuria
+  mean                  0.7594    0.075
+  std. dev.             0.4275   0.2634
+  weight sum               320      200
+  precision                  1        1
+
+Polydipsia
+  mean                  0.7031     0.04
+  std. dev.             0.4569    0.196
+  weight sum               320      200
+  precision                  1        1
+
+sudden weight loss
+  mean                  0.5875    0.145
+  std. dev.             0.4923   0.3521
+  weight sum               320      200
+  precision                  1        1
+
+Irritability
+  mean                  0.3438     0.08
+  std. dev.              0.475   0.2713
+  weight sum               320      200
+  precision                  1        1
+
+partial paresis
+  mean                     0.6     0.16
+  std. dev.             0.4899   0.3666
+  weight sum               320      200
+  precision                  1        1
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(2): class partial paresis 
+Polyuria(2): class sudden weight loss 
+Polydipsia(2): class Polyuria 
+sudden weight loss(2): class 
+Irritability(2): class Gender 
+partial paresis(2): class Polydipsia 
+class(2): 
+LogScore Bayes: -1954.4035093265452
+LogScore BDeu: -1988.2430958589916
+LogScore MDL: -1990.1286304992318
+LogScore ENTROPY: -1918.2095991661138
+LogScore AIC: -1941.209599166114
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         459               88.2692 %
+Incorrectly Classified Instances        61               11.7308 %
+Kappa statistic                          0.7538
+Mean absolute error                      0.1455
+Root mean squared error                  0.2795
+Relative absolute error                 30.7323 %
+Root relative squared error             57.4555 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,894    0,135    0,914      0,894    0,904      0,754    0,961     0,977     Positive
+                 0,865    0,106    0,836      0,865    0,850      0,754    0,961     0,930     Negative
+Weighted Avg.    0,883    0,124    0,884      0,883    0,883      0,754    0,961     0,959     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 286  34 |   a = Positive
+  27 173 |   b = Negative
+

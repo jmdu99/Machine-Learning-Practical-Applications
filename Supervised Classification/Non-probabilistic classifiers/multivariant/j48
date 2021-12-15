@@ -1,0 +1,85 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.8 -M 2
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              Irritability=Yes
+              partial paresis=Yes
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Polyuria=Yes <= 0
+|   Polydipsia=No <= 0
+|   |   Irritability=Yes <= 0
+|   |   |   Gender=Female <= 0
+|   |   |   |   partial paresis=Yes <= 0: Positive (11.0/4.0)
+|   |   |   |   partial paresis=Yes > 0: Negative (6.0/2.0)
+|   |   |   Gender=Female > 0: Positive (5.0)
+|   |   Irritability=Yes > 0: Positive (18.0)
+|   Polydipsia=No > 0
+|   |   Gender=Female <= 0: Negative (171.0/13.0)
+|   |   Gender=Female > 0
+|   |   |   partial paresis=Yes <= 0
+|   |   |   |   sudden weight loss=Yes <= 0: Negative (25.0/9.0)
+|   |   |   |   sudden weight loss=Yes > 0: Positive (9.0/1.0)
+|   |   |   partial paresis=Yes > 0: Positive (17.0/2.0)
+Polyuria=Yes > 0
+|   Polydipsia=No <= 0: Positive (193.0)
+|   Polydipsia=No > 0
+|   |   Gender=Female <= 0
+|   |   |   sudden weight loss=Yes <= 0
+|   |   |   |   partial paresis=Yes <= 0
+|   |   |   |   |   Irritability=Yes <= 0: Positive (5.0)
+|   |   |   |   |   Irritability=Yes > 0: Negative (7.0/3.0)
+|   |   |   |   partial paresis=Yes > 0
+|   |   |   |   |   Irritability=Yes <= 0: Negative (11.0/4.0)
+|   |   |   |   |   Irritability=Yes > 0: Positive (4.0)
+|   |   |   sudden weight loss=Yes > 0
+|   |   |   |   Irritability=Yes <= 0
+|   |   |   |   |   partial paresis=Yes <= 0: Negative (6.0/2.0)
+|   |   |   |   |   partial paresis=Yes > 0: Positive (6.0)
+|   |   |   |   Irritability=Yes > 0: Positive (10.0)
+|   |   Gender=Female > 0: Positive (16.0)
+
+Number of Leaves  : 	17
+
+Size of the tree : 	33
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         471               90.5769 %
+Incorrectly Classified Instances        49                9.4231 %
+Kappa statistic                          0.8041
+Mean absolute error                      0.1289
+Root mean squared error                  0.2693
+Relative absolute error                 27.2193 %
+Root relative squared error             55.3582 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,897    0,080    0,947      0,897    0,921      0,806    0,954     0,973     Positive
+                 0,920    0,103    0,848      0,920    0,882      0,806    0,954     0,897     Negative
+Weighted Avg.    0,906    0,089    0,909      0,906    0,906      0,806    0,954     0,944     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 287  33 |   a = Positive
+  16 184 |   b = Negative
+

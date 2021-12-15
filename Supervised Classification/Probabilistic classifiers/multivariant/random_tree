@@ -1,0 +1,103 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+Polyuria < 0.5
+|   Gender < 0.5
+|   |   Polydipsia < 0.5
+|   |   |   partial paresis < 0.5
+|   |   |   |   Irritability < 0.5
+|   |   |   |   |   sudden weight loss < 0.5 : Negative (115/3)
+|   |   |   |   |   sudden weight loss >= 0.5 : Negative (22/1)
+|   |   |   |   Irritability >= 0.5
+|   |   |   |   |   sudden weight loss < 0.5 : Negative (11/5)
+|   |   |   |   |   sudden weight loss >= 0.5 : Positive (1/0)
+|   |   |   partial paresis >= 0.5
+|   |   |   |   Irritability < 0.5 : Negative (16/2)
+|   |   |   |   Irritability >= 0.5 : Negative (6/1)
+|   |   Polydipsia >= 0.5
+|   |   |   Irritability < 0.5
+|   |   |   |   sudden weight loss < 0.5
+|   |   |   |   |   partial paresis < 0.5 : Positive (11/4)
+|   |   |   |   |   partial paresis >= 0.5 : Negative (1/0)
+|   |   |   |   sudden weight loss >= 0.5 : Negative (5/2)
+|   |   |   Irritability >= 0.5 : Positive (11/0)
+|   Gender >= 0.5
+|   |   sudden weight loss < 0.5
+|   |   |   Polydipsia < 0.5
+|   |   |   |   partial paresis < 0.5
+|   |   |   |   |   Irritability < 0.5 : Negative (24/9)
+|   |   |   |   |   Irritability >= 0.5 : Negative (1/0)
+|   |   |   |   partial paresis >= 0.5 : Positive (15/2)
+|   |   |   Polydipsia >= 0.5 : Positive (3/0)
+|   |   sudden weight loss >= 0.5
+|   |   |   Polydipsia < 0.5
+|   |   |   |   partial paresis < 0.5 : Positive (9/1)
+|   |   |   |   partial paresis >= 0.5 : Positive (2/0)
+|   |   |   Polydipsia >= 0.5 : Positive (9/0)
+Polyuria >= 0.5
+|   Polydipsia < 0.5
+|   |   sudden weight loss < 0.5
+|   |   |   Gender < 0.5
+|   |   |   |   Irritability < 0.5
+|   |   |   |   |   partial paresis < 0.5 : Positive (5/0)
+|   |   |   |   |   partial paresis >= 0.5 : Negative (11/4)
+|   |   |   |   Irritability >= 0.5
+|   |   |   |   |   partial paresis < 0.5 : Negative (7/3)
+|   |   |   |   |   partial paresis >= 0.5 : Positive (4/0)
+|   |   |   Gender >= 0.5 : Positive (4/0)
+|   |   sudden weight loss >= 0.5
+|   |   |   partial paresis < 0.5
+|   |   |   |   Gender < 0.5
+|   |   |   |   |   Irritability < 0.5 : Negative (6/2)
+|   |   |   |   |   Irritability >= 0.5 : Positive (6/0)
+|   |   |   |   Gender >= 0.5 : Positive (9/0)
+|   |   |   partial paresis >= 0.5 : Positive (13/0)
+|   Polydipsia >= 0.5 : Positive (193/0)
+
+Size of the tree : 53
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         469               90.1923 %
+Incorrectly Classified Instances        51                9.8077 %
+Kappa statistic                          0.7953
+Mean absolute error                      0.1131
+Root mean squared error                  0.2483
+Relative absolute error                 23.894  %
+Root relative squared error             51.0376 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,900    0,095    0,938      0,900    0,919      0,796    0,963     0,979     Positive
+                 0,905    0,100    0,850      0,905    0,877      0,796    0,963     0,901     Negative
+Weighted Avg.    0,902    0,097    0,904      0,902    0,902      0,796    0,963     0,949     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 288  32 |   a = Positive
+  19 181 |   b = Negative
+

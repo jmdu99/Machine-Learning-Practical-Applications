@@ -1,0 +1,137 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.RandomTree -F 4 -T 0.01 -R 1 -E DEFAULT -- -K 0 -M 1.0 -V 0.001 -S 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   13
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+Polyuria < 0.5
+|   Gender < 0.5
+|   |   Alopecia < 0.5
+|   |   |   delayed healing < 0.5
+|   |   |   |   Polydipsia < 0.5
+|   |   |   |   |   Itching < 0.5
+|   |   |   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   |   |   Irritability < 0.5 : Negative (69/0)
+|   |   |   |   |   |   |   Irritability >= 0.5
+|   |   |   |   |   |   |   |   muscle stiffness < 0.5 : Negative (6/0)
+|   |   |   |   |   |   |   |   muscle stiffness >= 0.5 : Positive (2/0)
+|   |   |   |   |   |   Genital thrush >= 0.5 : Negative (8/0)
+|   |   |   |   |   Itching >= 0.5 : Negative (1/0)
+|   |   |   |   Polydipsia >= 0.5
+|   |   |   |   |   muscle stiffness < 0.5
+|   |   |   |   |   |   Age < 0.34 : Positive (2/0)
+|   |   |   |   |   |   Age >= 0.34
+|   |   |   |   |   |   |   Genital thrush < 0.5 : Negative (1/0)
+|   |   |   |   |   |   |   Genital thrush >= 0.5 : Positive (1/0)
+|   |   |   |   |   muscle stiffness >= 0.5 : Negative (6/0)
+|   |   |   delayed healing >= 0.5
+|   |   |   |   Irritability < 0.5
+|   |   |   |   |   Genital thrush < 0.5 : Negative (1/0)
+|   |   |   |   |   Genital thrush >= 0.5 : Positive (2/0)
+|   |   |   |   Irritability >= 0.5
+|   |   |   |   |   partial paresis < 0.5 : Positive (6/0)
+|   |   |   |   |   partial paresis >= 0.5
+|   |   |   |   |   |   Age < 0.36 : Positive (1/0)
+|   |   |   |   |   |   Age >= 0.36 : Negative (1/0)
+|   |   Alopecia >= 0.5
+|   |   |   Irritability < 0.5
+|   |   |   |   Age < 0.34 : Positive (6/0)
+|   |   |   |   Age >= 0.34
+|   |   |   |   |   Polydipsia < 0.5
+|   |   |   |   |   |   partial paresis < 0.5 : Negative (57/0)
+|   |   |   |   |   |   partial paresis >= 0.5
+|   |   |   |   |   |   |   delayed healing < 0.5
+|   |   |   |   |   |   |   |   Age < 0.48 : Negative (1/0)
+|   |   |   |   |   |   |   |   Age >= 0.48 : Positive (2/0)
+|   |   |   |   |   |   |   delayed healing >= 0.5 : Negative (10/0)
+|   |   |   |   |   Polydipsia >= 0.5
+|   |   |   |   |   |   muscle stiffness < 0.5 : Positive (3/0)
+|   |   |   |   |   |   muscle stiffness >= 0.5 : Negative (1/0)
+|   |   |   Irritability >= 0.5
+|   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   Age < 0.67 : Negative (4/0)
+|   |   |   |   |   Age >= 0.67 : Positive (3/0)
+|   |   |   |   Genital thrush >= 0.5 : Positive (5/0)
+|   Gender >= 0.5
+|   |   Polydipsia < 0.5
+|   |   |   Alopecia < 0.5
+|   |   |   |   Age < 0.28
+|   |   |   |   |   muscle stiffness < 0.5
+|   |   |   |   |   |   Age < 0.25 : Negative (5/0)
+|   |   |   |   |   |   Age >= 0.25
+|   |   |   |   |   |   |   Irritability < 0.5 : Positive (5/0)
+|   |   |   |   |   |   |   Irritability >= 0.5 : Negative (1/0)
+|   |   |   |   |   muscle stiffness >= 0.5 : Positive (5/0)
+|   |   |   |   Age >= 0.28 : Positive (21/0)
+|   |   |   Alopecia >= 0.5
+|   |   |   |   delayed healing < 0.5 : Positive (1/0)
+|   |   |   |   delayed healing >= 0.5 : Negative (13/0)
+|   |   Polydipsia >= 0.5 : Positive (12/0)
+Polyuria >= 0.5
+|   delayed healing < 0.5 : Positive (120/0)
+|   delayed healing >= 0.5
+|   |   Alopecia < 0.5 : Positive (98/0)
+|   |   Alopecia >= 0.5
+|   |   |   Itching < 0.5 : Positive (14/0)
+|   |   |   Itching >= 0.5
+|   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   Age < 0.63 : Positive (4/0)
+|   |   |   |   |   Age >= 0.63 : Negative (11/0)
+|   |   |   |   Genital thrush >= 0.5
+|   |   |   |   |   visual blurring < 0.5
+|   |   |   |   |   |   Age < 0.35 : Positive (1/0)
+|   |   |   |   |   |   Age >= 0.35
+|   |   |   |   |   |   |   Polydipsia < 0.5 : Negative (4/0)
+|   |   |   |   |   |   |   Polydipsia >= 0.5 : Positive (1/0)
+|   |   |   |   |   visual blurring >= 0.5 : Positive (5/0)
+
+Size of the tree : 81
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         505               97.1154 %
+Incorrectly Classified Instances        15                2.8846 %
+Kappa statistic                          0.9393
+Mean absolute error                      0.0288
+Root mean squared error                  0.1698
+Relative absolute error                  6.0923 %
+Root relative squared error             34.9106 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,969    0,025    0,984      0,969    0,976      0,940    0,972     0,973     Positive
+                 0,975    0,031    0,951      0,975    0,963      0,940    0,972     0,937     Negative
+Weighted Avg.    0,971    0,027    0,971      0,971    0,971      0,940    0,972     0,959     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 310  10 |   a = Positive
+   5 195 |   b = Negative
+

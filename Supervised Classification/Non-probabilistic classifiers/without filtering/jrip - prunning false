@@ -1,0 +1,71 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 2 -N 2.0 -O 2 -S 100 -P
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last
+Instances:    520
+Attributes:   17
+              Age
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              weakness=No
+              Polyphagia=Yes
+              Genital thrush=Yes
+              visual blurring=Yes
+              Itching=No
+              Irritability=Yes
+              delayed healing=No
+              partial paresis=Yes
+              muscle stiffness=No
+              Alopecia=No
+              Obesity=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(Polyuria=Yes <= 0) and (Gender=Female <= 0) and (Polydipsia=No >= 1) and (Irritability=Yes <= 0) and (weakness=No >= 1) and (partial paresis=Yes <= 0) => class=Negative (88.0/0.0)
+(Polyuria=Yes <= 0) and (Alopecia=No <= 0) and (Polydipsia=No >= 1) and (Itching=No <= 0) and (weakness=No <= 0) => class=Negative (59.0/0.0)
+(Polydipsia=No >= 1) and (Gender=Female <= 0) and (Polyuria=Yes <= 0) and (Alopecia=No >= 1) and (Polyphagia=Yes <= 0) and (delayed healing=No >= 1) => class=Negative (16.0/0.0)
+(Polydipsia=No >= 1) and (delayed healing=No <= 0) and (Alopecia=No <= 0) and (Itching=No <= 0) and (Age >= 0.378378) and (Gender=Female <= 0) => class=Negative (15.0/0.0)
+(Polyuria=Yes <= 0) and (Polyphagia=Yes <= 0) and (Itching=No <= 0) and (sudden weight loss=Yes <= 0) and (Age >= 0.445946) and (Irritability=Yes <= 0) => class=Negative (7.0/0.0)
+(Polyuria=Yes <= 0) and (Age <= 0.324324) and (sudden weight loss=Yes >= 1) and (Gender=Female <= 0) => class=Negative (3.0/0.0)
+(Polyuria=Yes <= 0) and (visual blurring=Yes <= 0) and (Age <= 0.243243) and (Gender=Female >= 1) => class=Negative (5.0/0.0)
+(Polyuria=Yes <= 0) and (Age >= 0.513514) and (Age <= 0.540541) and (Irritability=Yes <= 0) => class=Negative (5.0/0.0)
+(Polyuria=Yes <= 0) and (Irritability=Yes >= 1) and (Age <= 0.391892) and (Polyphagia=Yes <= 0) and (Age >= 0.27027) => class=Negative (2.0/0.0)
+ => class=Positive (320.0/0.0)
+
+Number of Rules : 10
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         499               95.9615 %
+Incorrectly Classified Instances        21                4.0385 %
+Kappa statistic                          0.9154
+Mean absolute error                      0.0432
+Root mean squared error                  0.2007
+Relative absolute error                  9.1152 %
+Root relative squared error             41.2544 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,953    0,030    0,981      0,953    0,967      0,916    0,962     0,965     Positive
+                 0,970    0,047    0,928      0,970    0,949      0,916    0,962     0,915     Negative
+Weighted Avg.    0,960    0,036    0,961      0,960    0,960      0,916    0,962     0,946     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 305  15 |   a = Positive
+   6 194 |   b = Negative
+

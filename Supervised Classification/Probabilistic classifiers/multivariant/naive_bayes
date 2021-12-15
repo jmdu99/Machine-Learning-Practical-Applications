@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.61)   (0.39)
+=======================================
+Gender
+  mean                  0.5406    0.095
+  std. dev.             0.4983   0.2932
+  weight sum               320      200
+  precision                  1        1
+
+Polyuria
+  mean                  0.7594    0.075
+  std. dev.             0.4275   0.2634
+  weight sum               320      200
+  precision                  1        1
+
+Polydipsia
+  mean                  0.7031     0.04
+  std. dev.             0.4569    0.196
+  weight sum               320      200
+  precision                  1        1
+
+sudden weight loss
+  mean                  0.5875    0.145
+  std. dev.             0.4923   0.3521
+  weight sum               320      200
+  precision                  1        1
+
+Irritability
+  mean                  0.3438     0.08
+  std. dev.              0.475   0.2713
+  weight sum               320      200
+  precision                  1        1
+
+partial paresis
+  mean                     0.6     0.16
+  std. dev.             0.4899   0.3666
+  weight sum               320      200
+  precision                  1        1
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         452               86.9231 %
+Incorrectly Classified Instances        68               13.0769 %
+Kappa statistic                          0.7263
+Mean absolute error                      0.1348
+Root mean squared error                  0.2963
+Relative absolute error                 28.4626 %
+Root relative squared error             60.9026 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,878    0,145    0,906      0,878    0,892      0,727    0,958     0,975     Positive
+                 0,855    0,122    0,814      0,855    0,834      0,727    0,958     0,932     Negative
+Weighted Avg.    0,869    0,136    0,871      0,869    0,870      0,727    0,958     0,958     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 281  39 |   a = Positive
+  29 171 |   b = Negative
+

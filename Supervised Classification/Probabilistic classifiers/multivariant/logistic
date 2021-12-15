@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                         Class
+Variable              Positive
+==============================
+Gender                  3.4871
+Polyuria                2.9365
+Polydipsia              3.5534
+sudden weight loss      0.9661
+Irritability            2.0809
+partial paresis         0.7068
+Intercept              -3.3891
+
+
+Odds Ratios...
+                         Class
+Variable              Positive
+==============================
+Gender                 32.6914
+Polyuria                18.849
+Polydipsia             34.9311
+sudden weight loss      2.6276
+Irritability            8.0117
+partial paresis         2.0275
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         459               88.2692 %
+Incorrectly Classified Instances        61               11.7308 %
+Kappa statistic                          0.7472
+Mean absolute error                      0.1417
+Root mean squared error                  0.2761
+Relative absolute error                 29.921  %
+Root relative squared error             56.7557 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,938    0,205    0,880      0,938    0,908      0,750    0,961     0,978     Positive
+                 0,795    0,063    0,888      0,795    0,839      0,750    0,961     0,930     Negative
+Weighted Avg.    0,883    0,150    0,883      0,883    0,881      0,750    0,961     0,959     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 300  20 |   a = Positive
+  41 159 |   b = Negative
+

@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.bayes.BayesNet -F 5 -T 0.01 -R 1 -E DEFAULT -- -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   9
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              visual blurring
+              Irritability
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=9 #classindex=8
+Network structure (nodes followed by parents)
+Age(1): class Gender 
+Gender(2): class Alopecia 
+Polyuria(2): class Polydipsia 
+Polydipsia(2): class visual blurring 
+sudden weight loss(2): class Polyuria 
+visual blurring(2): class 
+Irritability(2): class Alopecia 
+Alopecia(2): class visual blurring 
+class(2): 
+LogScore Bayes: -2282.8617334735904
+LogScore BDeu: -2323.125657224277
+LogScore MDL: -2323.469372159901
+LogScore ENTROPY: -2239.0426832036324
+LogScore AIC: -2266.0426832036324
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         471               90.5769 %
+Incorrectly Classified Instances        49                9.4231 %
+Kappa statistic                          0.8   
+Mean absolute error                      0.1407
+Root mean squared error                  0.2669
+Relative absolute error                 29.7135 %
+Root relative squared error             54.8545 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,931    0,135    0,917      0,931    0,924      0,800    0,961     0,978     Positive
+                 0,865    0,069    0,887      0,865    0,876      0,800    0,961     0,900     Negative
+Weighted Avg.    0,906    0,110    0,905      0,906    0,906      0,800    0,961     0,948     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 298  22 |   a = Positive
+  27 173 |   b = Negative
+

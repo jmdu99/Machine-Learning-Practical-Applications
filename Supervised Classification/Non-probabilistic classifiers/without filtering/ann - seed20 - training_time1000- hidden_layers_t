@@ -1,0 +1,446 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 1000 -V 0 -S 20 -E 20 -H t -R
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last
+Instances:    520
+Attributes:   17
+              Age
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              weakness=No
+              Polyphagia=Yes
+              Genital thrush=Yes
+              visual blurring=Yes
+              Itching=No
+              Irritability=Yes
+              delayed healing=No
+              partial paresis=Yes
+              muscle stiffness=No
+              Alopecia=No
+              Obesity=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    0.2786720931108638
+    Node 2    -3.598427802942602
+    Node 3    2.67880673503744
+    Node 4    2.630506409053855
+    Node 5    -2.1778862842122066
+    Node 6    2.173552635534767
+    Node 7    2.4326832269456995
+    Node 8    3.595929469074623
+    Node 9    4.548881433459116
+    Node 10    3.3826318316642334
+    Node 11    1.7131365423358655
+    Node 12    -2.8663020675290865
+    Node 13    -4.863308072827319
+    Node 14    3.5143990217705774
+    Node 15    2.8857332163276532
+    Node 16    2.1053795070707726
+    Node 17    2.9048176973532045
+    Node 18    1.9684477031946694
+    Node 19    3.762105482905361
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.30032299255265105
+    Node 2    3.616878650697612
+    Node 3    -2.655047547451978
+    Node 4    -2.589349751662784
+    Node 5    2.1836170800442334
+    Node 6    -2.1537253041446562
+    Node 7    -2.4455130389893798
+    Node 8    -3.616230625596959
+    Node 9    -4.543487410180433
+    Node 10    -3.3690670537353027
+    Node 11    -1.749119622935022
+    Node 12    2.867735978480651
+    Node 13    4.862117317692342
+    Node 14    -3.5074577530769977
+    Node 15    -2.8973302920256567
+    Node 16    -2.152291496356666
+    Node 17    -2.903526299795187
+    Node 18    -1.947060524277688
+    Node 19    -3.750587859044268
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    0.0011118617035203316
+    Attrib Age    -0.832046972476746
+    Attrib Gender=Female    -0.4905724072074973
+    Attrib Polyuria=Yes    -1.77195006230841
+    Attrib Polydipsia=No    1.4987717065136383
+    Attrib sudden weight loss=Yes    -0.5983552865023608
+    Attrib weakness=No    -0.8430275013078795
+    Attrib Polyphagia=Yes    0.627094999956874
+    Attrib Genital thrush=Yes    -1.1905871660760263
+    Attrib visual blurring=Yes    -4.086005127059212
+    Attrib Itching=No    -1.2729026880793683
+    Attrib Irritability=Yes    -0.5980528283909454
+    Attrib delayed healing=No    -0.29848466705313265
+    Attrib partial paresis=Yes    -1.295845286763814
+    Attrib muscle stiffness=No    -2.6359570325487347
+    Attrib Alopecia=No    -0.3522059828369412
+    Attrib Obesity=No    -0.35517988675529694
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.46770887850373516
+    Attrib Age    -0.6061272823572491
+    Attrib Gender=Female    0.23653238179210262
+    Attrib Polyuria=Yes    0.8390784927059448
+    Attrib Polydipsia=No    -1.3777283317033653
+    Attrib sudden weight loss=Yes    0.8624620137591954
+    Attrib weakness=No    0.47329786804834406
+    Attrib Polyphagia=Yes    1.0967053846388761
+    Attrib Genital thrush=Yes    1.8749695639748736
+    Attrib visual blurring=Yes    -1.8369893948298428
+    Attrib Itching=No    -0.6386973605181876
+    Attrib Irritability=Yes    1.7635925040752283
+    Attrib delayed healing=No    -0.13977710408476024
+    Attrib partial paresis=Yes    -0.34684060628641894
+    Attrib muscle stiffness=No    -2.0030666610717534
+    Attrib Alopecia=No    0.9033666321286159
+    Attrib Obesity=No    0.8635695160395489
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -1.1275239454370907
+    Attrib Age    -0.5211162698471334
+    Attrib Gender=Female    -0.04730374968489324
+    Attrib Polyuria=Yes    1.543340592560736
+    Attrib Polydipsia=No    -1.988409030879577
+    Attrib sudden weight loss=Yes    -0.6295167897116783
+    Attrib weakness=No    0.6225482929330227
+    Attrib Polyphagia=Yes    0.17159869329489297
+    Attrib Genital thrush=Yes    1.6090332643083587
+    Attrib visual blurring=Yes    -2.1988945429674707
+    Attrib Itching=No    0.6157903152609211
+    Attrib Irritability=Yes    1.2612340685271783
+    Attrib delayed healing=No    -0.1807688047128816
+    Attrib partial paresis=Yes    0.016904165838410003
+    Attrib muscle stiffness=No    -2.0069056120094646
+    Attrib Alopecia=No    -0.3790321139835368
+    Attrib Obesity=No    0.24273685492365815
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.4356743751998856
+    Attrib Age    0.003878228889185055
+    Attrib Gender=Female    -0.253554965638885
+    Attrib Polyuria=Yes    -1.2541121716537906
+    Attrib Polydipsia=No    1.4621079278853115
+    Attrib sudden weight loss=Yes    2.329553207411111
+    Attrib weakness=No    0.33427182286568535
+    Attrib Polyphagia=Yes    1.10968955100924
+    Attrib Genital thrush=Yes    0.09573768050986328
+    Attrib visual blurring=Yes    0.8758030943334034
+    Attrib Itching=No    -1.8464148588025477
+    Attrib Irritability=Yes    -0.45617016784412195
+    Attrib delayed healing=No    -1.119593264942093
+    Attrib partial paresis=Yes    0.9761021409092646
+    Attrib muscle stiffness=No    -0.03840731182606198
+    Attrib Alopecia=No    0.3008274403816107
+    Attrib Obesity=No    -0.18558247586776913
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.303739133517103
+    Attrib Age    0.21974300289903467
+    Attrib Gender=Female    -0.4589006624489935
+    Attrib Polyuria=Yes    0.1060154383286549
+    Attrib Polydipsia=No    -0.7078163230703691
+    Attrib sudden weight loss=Yes    0.9270696641529785
+    Attrib weakness=No    -1.1295179209087638
+    Attrib Polyphagia=Yes    0.44679864235975486
+    Attrib Genital thrush=Yes    0.39846773528590895
+    Attrib visual blurring=Yes    -1.0709623618381388
+    Attrib Itching=No    0.22097854750984086
+    Attrib Irritability=Yes    -0.046452332507261704
+    Attrib delayed healing=No    -1.5276815441659541
+    Attrib partial paresis=Yes    -0.7276194507422996
+    Attrib muscle stiffness=No    -0.19803217408593876
+    Attrib Alopecia=No    -0.79222620970259
+    Attrib Obesity=No    0.07904852537216611
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.6559669049413606
+    Attrib Age    1.0294903223777383
+    Attrib Gender=Female    1.9051957056771487
+    Attrib Polyuria=Yes    -0.47567738736763143
+    Attrib Polydipsia=No    -1.1230582050325988
+    Attrib sudden weight loss=Yes    1.1705980246212713
+    Attrib weakness=No    -0.919379620247536
+    Attrib Polyphagia=Yes    1.0045765224274128
+    Attrib Genital thrush=Yes    1.2899949283873697
+    Attrib visual blurring=Yes    0.606107490908816
+    Attrib Itching=No    0.07959450058611402
+    Attrib Irritability=Yes    0.16822284725753076
+    Attrib delayed healing=No    -0.6637161593384786
+    Attrib partial paresis=Yes    -0.27123954360251573
+    Attrib muscle stiffness=No    -0.02967415753970175
+    Attrib Alopecia=No    2.5462888594979347
+    Attrib Obesity=No    -1.4229237419799676
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.33573253038360285
+    Attrib Age    -0.9962491216550126
+    Attrib Gender=Female    -0.15057020470249116
+    Attrib Polyuria=Yes    1.5733348885645888
+    Attrib Polydipsia=No    -1.55557296124418
+    Attrib sudden weight loss=Yes    1.1450159650166007
+    Attrib weakness=No    0.8094731506412148
+    Attrib Polyphagia=Yes    0.9440130171554529
+    Attrib Genital thrush=Yes    1.9823337838005883
+    Attrib visual blurring=Yes    -2.122699446976464
+    Attrib Itching=No    -0.7685401574155192
+    Attrib Irritability=Yes    2.2134674109331476
+    Attrib delayed healing=No    -0.4550674765615213
+    Attrib partial paresis=Yes    -0.5118982063153075
+    Attrib muscle stiffness=No    -2.347933444634826
+    Attrib Alopecia=No    1.3894312106078912
+    Attrib Obesity=No    1.5781102476917552
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -1.7779096517766837
+    Attrib Age    -0.9107633118866312
+    Attrib Gender=Female    -0.5026440045150865
+    Attrib Polyuria=Yes    1.7505827548392325
+    Attrib Polydipsia=No    -2.846627750067859
+    Attrib sudden weight loss=Yes    -1.607485968707583
+    Attrib weakness=No    -0.2071691323616696
+    Attrib Polyphagia=Yes    -0.30045917624597585
+    Attrib Genital thrush=Yes    0.2126830771896121
+    Attrib visual blurring=Yes    -2.113006323695658
+    Attrib Itching=No    2.5003871360387886
+    Attrib Irritability=Yes    0.9380318552265793
+    Attrib delayed healing=No    -1.6005636155140102
+    Attrib partial paresis=Yes    0.7860001376467493
+    Attrib muscle stiffness=No    -0.6105569927592671
+    Attrib Alopecia=No    -1.9074035847874828
+    Attrib Obesity=No    0.17895351881539096
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    0.318984725157629
+    Attrib Age    1.6501954170049413
+    Attrib Gender=Female    3.4179623333332843
+    Attrib Polyuria=Yes    2.1207327244790606
+    Attrib Polydipsia=No    -2.0029111389611005
+    Attrib sudden weight loss=Yes    1.2474532187540783
+    Attrib weakness=No    1.2530558653939814
+    Attrib Polyphagia=Yes    0.8357236963618485
+    Attrib Genital thrush=Yes    -0.8697006736254743
+    Attrib visual blurring=Yes    1.811787461232723
+    Attrib Itching=No    1.906293775064434
+    Attrib Irritability=Yes    -2.0077710295588753
+    Attrib delayed healing=No    1.3645603776408735
+    Attrib partial paresis=Yes    0.13509174375713806
+    Attrib muscle stiffness=No    1.6596934095620064
+    Attrib Alopecia=No    0.1583526069379177
+    Attrib Obesity=No    -0.13077336345751053
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.9825725016013217
+    Attrib Age    0.6414732443075872
+    Attrib Gender=Female    0.9624179556633002
+    Attrib Polyuria=Yes    0.15218311825082512
+    Attrib Polydipsia=No    -1.687108574663931
+    Attrib sudden weight loss=Yes    0.03609560372239423
+    Attrib weakness=No    -0.08123906032295584
+    Attrib Polyphagia=Yes    0.7028235793475455
+    Attrib Genital thrush=Yes    1.0048889442134696
+    Attrib visual blurring=Yes    -1.7733216326574939
+    Attrib Itching=No    0.45039722816969935
+    Attrib Irritability=Yes    0.48696711991609565
+    Attrib delayed healing=No    0.35460511975587666
+    Attrib partial paresis=Yes    -0.6846571363166
+    Attrib muscle stiffness=No    -1.7592909110517507
+    Attrib Alopecia=No    0.5126354442800762
+    Attrib Obesity=No    -1.6109490976526617
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    0.04500978112200029
+    Attrib Age    -1.7465316468788457
+    Attrib Gender=Female    -0.3831067696335491
+    Attrib Polyuria=Yes    -2.1969391351375958
+    Attrib Polydipsia=No    2.0000438040254664
+    Attrib sudden weight loss=Yes    0.05368695988768947
+    Attrib weakness=No    -0.7390223854052906
+    Attrib Polyphagia=Yes    0.7731405261659373
+    Attrib Genital thrush=Yes    -1.0419883487322252
+    Attrib visual blurring=Yes    -3.1233210915198972
+    Attrib Itching=No    -1.1729135887262652
+    Attrib Irritability=Yes    -0.2131687872483292
+    Attrib delayed healing=No    -0.9493928405435118
+    Attrib partial paresis=Yes    -0.9627046374188422
+    Attrib muscle stiffness=No    -2.199019537700855
+    Attrib Alopecia=No    0.24629105683429614
+    Attrib Obesity=No    -0.6805684072195108
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    0.7998991672104779
+    Attrib Age    -0.7266412322254321
+    Attrib Gender=Female    -1.3408846054958807
+    Attrib Polyuria=Yes    -2.6128537405656576
+    Attrib Polydipsia=No    2.487851575043616
+    Attrib sudden weight loss=Yes    3.357559799209408
+    Attrib weakness=No    1.72379462510513
+    Attrib Polyphagia=Yes    2.6087919068131753
+    Attrib Genital thrush=Yes    -0.21577067124157695
+    Attrib visual blurring=Yes    0.10192753822309594
+    Attrib Itching=No    -3.6216039542967637
+    Attrib Irritability=Yes    0.03868404530647358
+    Attrib delayed healing=No    -0.4588802172008188
+    Attrib partial paresis=Yes    0.7241313320419883
+    Attrib muscle stiffness=No    -0.41736715083711573
+    Attrib Alopecia=No    -0.5460625139598901
+    Attrib Obesity=No    0.34819845770548735
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -0.31820165233320347
+    Attrib Age    -0.032375592849679766
+    Attrib Gender=Female    0.4700755559997213
+    Attrib Polyuria=Yes    2.2028430569966875
+    Attrib Polydipsia=No    -1.0745071012768435
+    Attrib sudden weight loss=Yes    1.0821897427365996
+    Attrib weakness=No    0.6352706857651618
+    Attrib Polyphagia=Yes    0.8191223074541694
+    Attrib Genital thrush=Yes    1.8020110051448028
+    Attrib visual blurring=Yes    2.0414649362204904
+    Attrib Itching=No    -0.4529421578200398
+    Attrib Irritability=Yes    1.429820581062408
+    Attrib delayed healing=No    -1.1330983673741644
+    Attrib partial paresis=Yes    0.5636968932138496
+    Attrib muscle stiffness=No    2.0822917132138463
+    Attrib Alopecia=No    1.999529915480169
+    Attrib Obesity=No    1.782662119455027
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    0.07497760409095502
+    Attrib Age    1.443044208245176
+    Attrib Gender=Female    3.287456706437484
+    Attrib Polyuria=Yes    1.7628975814641838
+    Attrib Polydipsia=No    -1.5830212871778884
+    Attrib sudden weight loss=Yes    1.1561122260411716
+    Attrib weakness=No    1.1203186320837744
+    Attrib Polyphagia=Yes    0.9893137660273231
+    Attrib Genital thrush=Yes    -0.9339459342235927
+    Attrib visual blurring=Yes    1.4084786316905022
+    Attrib Itching=No    2.1730904167650515
+    Attrib Irritability=Yes    -1.932238038325385
+    Attrib delayed healing=No    0.6200341846050731
+    Attrib partial paresis=Yes    0.801356120731287
+    Attrib muscle stiffness=No    1.5360078121259173
+    Attrib Alopecia=No    0.5230752919818996
+    Attrib Obesity=No    -0.0032471651833735067
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -0.27942120237049667
+    Attrib Age    0.32260428956691223
+    Attrib Gender=Female    -0.6165814715354613
+    Attrib Polyuria=Yes    0.02289107112044752
+    Attrib Polydipsia=No    -1.3492550809376331
+    Attrib sudden weight loss=Yes    -0.33591991363307194
+    Attrib weakness=No    -0.8980558103864668
+    Attrib Polyphagia=Yes    0.46035699621156645
+    Attrib Genital thrush=Yes    -0.0375761114125382
+    Attrib visual blurring=Yes    -0.827294764109329
+    Attrib Itching=No    0.3045198838689731
+    Attrib Irritability=Yes    0.16517870925327902
+    Attrib delayed healing=No    -0.9683534499964699
+    Attrib partial paresis=Yes    -0.8803269324302853
+    Attrib muscle stiffness=No    -0.45777893985442825
+    Attrib Alopecia=No    -1.254767483607259
+    Attrib Obesity=No    -0.7488972592019325
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -0.770951476648052
+    Attrib Age    -0.8099539179052131
+    Attrib Gender=Female    -0.11921983613585979
+    Attrib Polyuria=Yes    1.1290509676790454
+    Attrib Polydipsia=No    -1.7549853665885216
+    Attrib sudden weight loss=Yes    0.7240881690054065
+    Attrib weakness=No    0.6671428565006015
+    Attrib Polyphagia=Yes    1.2178274831083025
+    Attrib Genital thrush=Yes    1.5758866718510671
+    Attrib visual blurring=Yes    -2.4664419269664744
+    Attrib Itching=No    -0.3342569670491432
+    Attrib Irritability=Yes    1.535204986612971
+    Attrib delayed healing=No    -0.22889875077636862
+    Attrib partial paresis=Yes    -0.5027647451232963
+    Attrib muscle stiffness=No    -2.134099741056353
+    Attrib Alopecia=No    0.7571223427206464
+    Attrib Obesity=No    0.6952629680258174
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -0.0906260228006598
+    Attrib Age    0.22508157781495325
+    Attrib Gender=Female    -0.45044142497658624
+    Attrib Polyuria=Yes    -0.13943356750338937
+    Attrib Polydipsia=No    -0.5773240398204904
+    Attrib sudden weight loss=Yes    0.4036721072339653
+    Attrib weakness=No    -1.1787174435039676
+    Attrib Polyphagia=Yes    0.430829464837774
+    Attrib Genital thrush=Yes    0.23780915612357725
+    Attrib visual blurring=Yes    -0.737529926793184
+    Attrib Itching=No    -0.20804206996804755
+    Attrib Irritability=Yes    -0.009077131224347449
+    Attrib delayed healing=No    -1.3876173944630215
+    Attrib partial paresis=Yes    -0.9640583714353498
+    Attrib muscle stiffness=No    -0.38534523523747255
+    Attrib Alopecia=No    -1.0139271437670576
+    Attrib Obesity=No    -0.37923033398547173
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.1952207078426809
+    Attrib Age    6.055214343595766
+    Attrib Gender=Female    1.9806393961914877
+    Attrib Polyuria=Yes    2.092522712544858
+    Attrib Polydipsia=No    -1.2458204564691266
+    Attrib sudden weight loss=Yes    0.4185898280097185
+    Attrib weakness=No    -0.8314652455975647
+    Attrib Polyphagia=Yes    -0.48400540426846483
+    Attrib Genital thrush=Yes    -0.2226565451203396
+    Attrib visual blurring=Yes    3.0186785501154456
+    Attrib Itching=No    1.9350277038164228
+    Attrib Irritability=Yes    -1.3543816020735406
+    Attrib delayed healing=No    1.862432846595033
+    Attrib partial paresis=Yes    1.0250701513525546
+    Attrib muscle stiffness=No    2.0216597800998932
+    Attrib Alopecia=No    0.5984702263543803
+    Attrib Obesity=No    -1.704440363167018
+Class Positive
+    Input
+    Node 0
+Class Negative
+    Input
+    Node 1
+
+
+Time taken to build model: 1.79 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         504               96.9231 %
+Incorrectly Classified Instances        16                3.0769 %
+Kappa statistic                          0.935 
+Mean absolute error                      0.0386
+Root mean squared error                  0.1656
+Relative absolute error                  8.161  %
+Root relative squared error             34.0314 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,975    0,040    0,975      0,975    0,975      0,935    0,988     0,994     Positive
+                 0,960    0,025    0,960      0,960    0,960      0,935    0,988     0,968     Negative
+Weighted Avg.    0,969    0,034    0,969      0,969    0,969      0,935    0,988     0,984     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 312   8 |   a = Positive
+   8 192 |   b = Negative
+

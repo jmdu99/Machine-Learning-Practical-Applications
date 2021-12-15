@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="diabetes_data_upload" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Genital_thrush">
+			<state id="No" />
+			<state id="Yes" />
+			<probabilities>0.7769230769230769 0.2230769230769231</probabilities>
+		</cpt>
+		<cpt id="Alopecia">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Genital_thrush</parents>
+			<probabilities>0.7079207920792079 0.2920792079207921 0.4741379310344828 0.5258620689655172</probabilities>
+		</cpt>
+		<cpt id="Gender">
+			<state id="Female" />
+			<state id="Male" />
+			<parents>Genital_thrush Alopecia</parents>
+			<probabilities>0.541958041958042 0.458041958041958 0.1355932203389831 0.864406779661017 0.1818181818181818 0.8181818181818181 0.180327868852459 0.819672131147541</probabilities>
+		</cpt>
+		<cpt id="Obesity">
+			<state id="No" />
+			<state id="Yes" />
+			<probabilities>0.8307692307692308 0.1692307692307692</probabilities>
+		</cpt>
+		<cpt id="Irritability">
+			<state id="No" />
+			<state id="Yes" />
+			<probabilities>0.7576923076923078 0.2423076923076923</probabilities>
+		</cpt>
+		<cpt id="class">
+			<state id="Negative" />
+			<state id="Positive" />
+			<parents>Gender Irritability</parents>
+			<probabilities>0.125 0.875 0.02083333333333333 0.9791666666666666 0.664 0.336 0.1923076923076923 0.8076923076923077</probabilities>
+		</cpt>
+		<cpt id="Polyuria">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Obesity class</parents>
+			<probabilities>0.9595375722543352 0.04046242774566474 0.2471042471042471 0.7528957528957529 0.7037037037037037 0.2962962962962963 0.2131147540983607 0.7868852459016393</probabilities>
+		</cpt>
+		<cpt id="Polyphagia">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polyuria</parents>
+			<probabilities>0.7290076335877862 0.2709923664122137 0.3565891472868217 0.6434108527131783</probabilities>
+		</cpt>
+		<cpt id="muscle_stiffness">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polyphagia</parents>
+			<probabilities>0.7667844522968198 0.2332155477031802 0.4556962025316456 0.5443037974683543</probabilities>
+		</cpt>
+		<cpt id="visual_blurring">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Gender Polyphagia muscle_stiffness class</parents>
+			<probabilities>0.6666666666666666 0.3333333333333333 0.3142857142857143 0.6857142857142857 0.125 0.875 0.125 0.875 0.75 0.25 0.6379310344827586 0.3620689655172414 0.5 0.5 0.3214285714285714 0.6785714285714285 0.9956140350877193 0.004385964912280702 0.7222222222222222 0.2777777777777778 0.3809523809523809 0.6190476190476191 0.5555555555555556 0.4444444444444444 0.9090909090909092 0.09090909090909091 0.2631578947368421 0.7368421052631579 0.01351351351351351 0.9864864864864865 0.4594594594594595 0.5405405405405406</probabilities>
+		</cpt>
+		<cpt id="Polydipsia">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polyuria visual_blurring Alopecia class</parents>
+			<probabilities>0.9882352941176471 0.01176470588235294 0.7142857142857142 0.2857142857142857 0.9907407407407407 0.009259259259259259 0.4444444444444444 0.5555555555555556 0.5714285714285714 0.4285714285714285 0.6296296296296295 0.3703703703703703 0.9696969696969697 0.0303030303030303 0.3076923076923077 0.6923076923076923 0.5 0.5 0.1948051948051948 0.8051948051948052 0.9 0.1 0.6774193548387096 0.3225806451612903 0.5 0.5 0.05454545454545454 0.9454545454545454 0.9583333333333333 0.04166666666666666 0.32 0.68</probabilities>
+		</cpt>
+		<cpt id="weakness">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polydipsia</parents>
+			<probabilities>0.5609756097560976 0.4390243902439024 0.2317596566523605 0.7682403433476395</probabilities>
+		</cpt>
+		<cpt id="sudden_weight_loss">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polyuria weakness class</parents>
+			<probabilities>0.8666666666666667 0.1333333333333334 0.8648648648648649 0.1351351351351351 0.8625 0.1375 0.45 0.55 0.9444444444444444 0.05555555555555555 0.4615384615384616 0.5384615384615385 0.4285714285714285 0.5714285714285714 0.2921348314606741 0.7078651685393258</probabilities>
+		</cpt>
+		<cpt id="delayed_healing">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polydipsia weakness Polyphagia Alopecia class</parents>
+			<probabilities>0.9923076923076923 0.007692307692307693 0.7727272727272727 0.2272727272727273 0.6000000000000001 0.4 0.9090909090909092 0.09090909090909091 0.9666666666666667 0.03333333333333333 0.9615384615384616 0.03846153846153846 0.04166666666666666 0.9583333333333333 0.8571428571428571 0.1428571428571428 0.9230769230769231 0.07692307692307693 0.3333333333333333 0.6666666666666666 0.1041666666666667 0.8958333333333333 0.6000000000000001 0.4 0.25 0.75 0.4666666666666667 0.5333333333333333 0.02272727272727273 0.9772727272727273 0.2222222222222222 0.7777777777777777 0.9 0.1 0.75 0.25 0.5 0.5 0.9375 0.0625 0.5 0.5 0.125 0.875 0.5 0.5 0.1428571428571428 0.8571428571428571 0.875 0.125 0.6346153846153847 0.3653846153846154 0.5 0.5 0.25 0.75 0.5 0.5 0.40625 0.59375 0.25 0.75 0.5263157894736842 0.4736842105263158</probabilities>
+		</cpt>
+		<cpt id="Itching">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Polydipsia Genital_thrush delayed_healing Alopecia class</parents>
+			<probabilities>0.9878048780487805 0.01219512195121951 0.8333333333333333 0.1666666666666667 0.4615384615384616 0.5384615384615385 0.9333333333333333 0.06666666666666667 0.1666666666666667 0.8333333333333333 0.7000000000000001 0.3 0.007936507936507936 0.992063492063492 0.8333333333333333 0.1666666666666667 0.9444444444444444 0.05555555555555555 0.3333333333333333 0.6666666666666666 0.1 0.9 0.05 0.9500000000000001 0.5 0.5 0.2222222222222222 0.7777777777777777 0.2857142857142857 0.7142857142857142 0.5714285714285714 0.4285714285714285 0.0625 0.9375 0.6911764705882353 0.3088235294117647 0.5 0.5 0.5833333333333333 0.4166666666666666 0.5 0.5 0.2345679012345679 0.7654320987654321 0.25 0.75 0.5555555555555556 0.4444444444444444 0.5 0.5 0.3125 0.6875 0.5 0.5 0.5 0.5 0.5 0.5 0.4210526315789473 0.5789473684210527 0.5 0.5 0.6666666666666666 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="partial_paresis">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>Gender Polyuria Polydipsia sudden_weight_loss visual_blurring Irritability delayed_healing Alopecia</parents>
+			<probabilities>0.9166666666666666 0.08333333333333333 0.5 0.5 0.5 0.5 0.8 0.2 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.03571428571428571 0.9642857142857142 0.75 0.25 0.5 0.5 0.9444444444444444 0.05555555555555555 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.9444444444444444 0.05555555555555555 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.3333333333333333 0.6666666666666666 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.125 0.875 0.5 0.5 0.25 0.75 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.8333333333333333 0.1666666666666667 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.9 0.1 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.5 0.5 0.875 0.125 0.5 0.5 0.875 0.125 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.125 0.875 0.8333333333333333 0.1666666666666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.1666666666666667 0.8333333333333333 0.5 0.5 0.125 0.875 0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.8333333333333333 0.1666666666666667 0.8333333333333333 0.1666666666666667 0.03846153846153846 0.9615384615384616 0.5 0.5 0.5 0.5 0.5 0.5 0.1 0.9 0.5 0.5 0.05555555555555555 0.9444444444444444 0.5 0.5 0.03125 0.96875 0.5 0.5 0.125 0.875 0.5 0.5 0.0625 0.9375 0.8333333333333333 0.1666666666666667 0.02380952380952381 0.9761904761904762 0.5 0.5 0.08333333333333333 0.9166666666666666 0.5 0.5 0.875 0.125 0.5 0.5 0.03846153846153846 0.9615384615384616 0.75 0.25 0.9491525423728814 0.05084745762711865 0.9411764705882353 0.05882352941176471 0.5 0.5 0.9642857142857142 0.03571428571428571 0.5 0.5 0.75 0.25 0.6666666666666666 0.3333333333333333 0.5 0.5 0.9375 0.0625 0.1666666666666667 0.8333333333333333 0.75 0.25 0.4705882352941176 0.5294117647058824 0.5 0.5 0.5 0.5 0.5 0.5 0.8 0.2 0.9615384615384616 0.03846153846153846 0.5 0.5 0.75 0.25 0.9285714285714285 0.07142857142857142 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.875 0.125 0.5 0.5 0.5 0.5 0.75 0.25 0.5 0.5 0.6666666666666666 0.3333333333333333 0.8333333333333333 0.1666666666666667 0.75 0.25 0.75 0.25 0.5 0.5 0.75 0.25 0.5 0.5 0.75 0.25 0.875 0.125 0.75 0.25 0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.125 0.875 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5 0.125 0.875 0.1666666666666667 0.8333333333333333 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.8333333333333333 0.1666666666666667 0.5 0.5 0.8333333333333333 0.1666666666666667 0.5 0.5 0.5 0.5 0.8333333333333333 0.1666666666666667 0.75 0.25 0.75 0.25 0.5 0.5 0.75 0.25 0.5 0.5 0.1 0.9 0.75 0.25 0.0625 0.9375 0.5 0.5 0.1666666666666667 0.8333333333333333 0.1666666666666667 0.8333333333333333 0.9 0.1 0.8333333333333333 0.1666666666666667 0.125 0.875 0.125 0.875 0.9 0.1 0.5 0.5 0.9285714285714285 0.07142857142857142 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.9 0.1 0.5 0.5 0.25 0.75 0.8333333333333333 0.1666666666666667 0.25 0.75 0.25 0.75 0.25 0.75 0.75 0.25 0.7777777777777777 0.2222222222222222 0.5 0.5 0.25 0.75 0.8333333333333333 0.1666666666666667 0.1 0.9 0.5 0.5 0.5 0.5 0.1666666666666667 0.8333333333333333 0.9166666666666666 0.08333333333333333 0.25 0.75 0.9166666666666666 0.08333333333333333 0.5 0.5 0.125 0.875 0.5 0.5 0.5 0.5 0.3333333333333333 0.6666666666666666 0.07142857142857142 0.9285714285714285 0.9 0.1 0.0625 0.9375 0.8333333333333333 0.1666666666666667 0.8 0.2 0.125 0.875 0.125 0.875 0.25 0.75</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.6518.0 ACADEMIC" name="diabetes_data_upload">
+			<node id="Gender">
+				<name>Gender</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>811 749 883 797</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Polyuria">
+				<name>Polyuria</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>901 992 973 1040</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Polydipsia">
+				<name>Polydipsia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1032 1133 1104 1181</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="sudden_weight_loss">
+				<name>sudden weight loss</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 649 370 697</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="weakness">
+				<name>weakness</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>524 471 596 519</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Polyphagia">
+				<name>Polyphagia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1132 725 1204 773</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Genital_thrush">
+				<name>Genital thrush</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>70 10 142 58</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="visual_blurring">
+				<name>visual blurring</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1074 921 1146 969</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Itching">
+				<name>Itching</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>409 971 481 1019</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Irritability">
+				<name>Irritability</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>536 692 608 740</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="delayed_healing">
+				<name>delayed healing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>691 992 763 1040</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="partial_paresis">
+				<name>partial paresis</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>479 41 551 89</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="muscle_stiffness">
+				<name>muscle stiffness</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>863 631 935 679</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Alopecia">
+				<name>Alopecia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>256 182 328 230</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Obesity">
+				<name>Obesity</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>882 52 954 100</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="class">
+				<name>class</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>620 818 692 866</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<textbox>
+				<caption>Input file: diabetes_data_upload.csv\nData rows: 520\nElapsed time: 0.047s\n\nLearning algorithm: Greedy ThickThinning\nAlgorithm parameters:\nMax parent count: 8\nNo background knowledge\n\nScore: -4666.04\nEM Log Likelihood: -4058.3</caption>
+				<font color="000000" name="Arial" size="8" />
+				<position>1374 353 1572 507</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

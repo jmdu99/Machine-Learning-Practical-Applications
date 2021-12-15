@@ -1,0 +1,259 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R9-16
+Instances:    520
+Attributes:   9
+              Polyuria
+              Polydipsia
+              Gender
+              sudden weight loss
+              partial paresis
+              Irritability
+              Polyphagia
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Polyuria <= 0
+|   Polydipsia <= 0
+|   |   Gender <= 0
+|   |   |   Irritability <= 0: LM_1:6/30 (153)
+|   |   |   Irritability > 0
+|   |   |   |   partial paresis <= 0: LM_2:6/36 (12)
+|   |   |   |   partial paresis > 0: LM_3:6/36 (6)
+|   |   Gender > 0: LM_4:6/24 (51)
+|   Polydipsia > 0: LM_5:6/18 (40)
+Polyuria > 0
+|   Polydipsia <= 0
+|   |   Alopecia <= 0: LM_6:6/24 (21)
+|   |   Alopecia > 0: LM_7:6/24 (44)
+|   Polydipsia > 0: LM_8:6/18 (193)
+
+Number of Leaves  : 	8
+
+Size of the Tree : 	15
+
+
+
+
+LM_1:
+Class Positive :
+-2.26 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.45 +
+[Gender] * 1.69 +
+[sudden weight loss] * 0.35 +
+[partial paresis] * 0.54 +
+[Irritability] * 1.41 +
+[Polyphagia] * 0.04 +
+[Alopecia] * 0.75
+
+Class Negative :
+2.26 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.45 +
+[Gender] * -1.69 +
+[sudden weight loss] * -0.35 +
+[partial paresis] * -0.54 +
+[Irritability] * -1.41 +
+[Polyphagia] * -0.04 +
+[Alopecia] * -0.75
+
+
+LM_2:
+Class Positive :
+-1 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.45 +
+[Gender] * 1.69 +
+[sudden weight loss] * 2.79 +
+[partial paresis] * -0.8 +
+[Irritability] * 1.41 +
+[Polyphagia] * -0.18 +
+[Alopecia] * -0.96
+
+Class Negative :
+1    + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.45 +
+[Gender] * -1.69 +
+[sudden weight loss] * -2.79 +
+[partial paresis] * 0.8  +
+[Irritability] * -1.41 +
+[Polyphagia] * 0.18 +
+[Alopecia] * 0.96
+
+LM_3:
+Class Positive :
+-4.44 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.45 +
+[Gender] * 1.69 +
+[sudden weight loss] * 1.22 +
+[partial paresis] * -0.8 +
+[Irritability] * 1.41 +
+[Polyphagia] * -0.24 +
+[Alopecia] * 7.09
+
+Class Negative :
+4.44 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.45 +
+[Gender] * -1.69 +
+[sudden weight loss] * -1.22 +
+[partial paresis] * 0.8  +
+[Irritability] * -1.41 +
+[Polyphagia] * 0.24 +
+[Alopecia] * -7.09
+
+LM_4:
+Class Positive :
+-1.28 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.45 +
+[Gender] * 1.69 +
+[sudden weight loss] * 0.54 +
+[partial paresis] * 0.56 +
+[Irritability] * -1.97 +
+[Polyphagia] * 0.75 +
+[Alopecia] * -1.73
+
+Class Negative :
+1.28 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.45 +
+[Gender] * -1.69 +
+[sudden weight loss] * -0.54 +
+[partial paresis] * -0.56 +
+[Irritability] * 1.97 +
+[Polyphagia] * -0.75 +
+[Alopecia] * 1.73
+
+LM_5:
+Class Positive :
+-1.58 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.45 +
+[Gender] * 1.63 +
+[sudden weight loss] * 0.24 +
+[partial paresis] * -0.76 +
+[Irritability] * 2.14 +
+[Polyphagia] * 0.16 +
+[Alopecia] * 1.09
+
+Class Negative :
+1.58 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.45 +
+[Gender] * -1.63 +
+[sudden weight loss] * -0.24 +
+[partial paresis] * 0.76 +
+[Irritability] * -2.14 +
+[Polyphagia] * -0.16 +
+[Alopecia] * -1.09
+
+
+
+LM_6:
+Class Positive :
+3.58 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 2.05 +
+[Gender] * 2.21 +
+[sudden weight loss] * 0.4  +
+[partial paresis] * 0.59 +
+[Irritability] * 0.94 +
+[Polyphagia] * -0.72 +
+[Alopecia] * -2.15
+
+Class Negative :
+-3.58 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -2.05 +
+[Gender] * -2.21 +
+[sudden weight loss] * -0.4 +
+[partial paresis] * -0.59 +
+[Irritability] * -0.94 +
+[Polyphagia] * 0.72 +
+[Alopecia] * 2.15
+
+LM_7:
+Class Positive :
+0.29 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 2.05 +
+[Gender] * 2.74 +
+[sudden weight loss] * 0.4  +
+[partial paresis] * 1.03 +
+[Irritability] * 1.28 +
+[Polyphagia] * -0.87 +
+[Alopecia] * -2.15
+
+Class Negative :
+-0.29 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -2.05 +
+[Gender] * -2.74 +
+[sudden weight loss] * -0.4 +
+[partial paresis] * -1.03 +
+[Irritability] * -1.28 +
+[Polyphagia] * 0.87 +
+[Alopecia] * 2.15
+
+LM_8:
+Class Positive :
+3.22 + 
+[Polyuria] * 1.3  +
+[Polydipsia] * 2.05 +
+[Gender] * 1.02 +
+[sudden weight loss] * 0.4  +
+[partial paresis] * 0.33 +
+[Irritability] * 0.63 +
+[Polyphagia] * -0.5 +
+[Alopecia] * -1.59
+
+Class Negative :
+-3.22 + 
+[Polyuria] * -1.3 +
+[Polydipsia] * -2.05 +
+[Gender] * -1.02 +
+[sudden weight loss] * -0.4 +
+[partial paresis] * -0.33 +
+[Irritability] * -0.63 +
+[Polyphagia] * 0.5  +
+[Alopecia] * 1.59
+
+
+Time taken to build model: 0.18 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         484               93.0769 %
+Incorrectly Classified Instances        36                6.9231 %
+Kappa statistic                          0.8551
+Mean absolute error                      0.0997
+Root mean squared error                  0.2464
+Relative absolute error                 21.0627 %
+Root relative squared error             50.6414 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,928    0,065    0,958      0,928    0,943      0,856    0,963     0,980     Positive
+                 0,935    0,072    0,890      0,935    0,912      0,856    0,963     0,922     Negative
+Weighted Avg.    0,931    0,068    0,932      0,931    0,931      0,856    0,963     0,958     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 297  23 |   a = Positive
+  13 187 |   b = Negative
+

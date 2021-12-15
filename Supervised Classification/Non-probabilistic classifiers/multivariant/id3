@@ -1,0 +1,98 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.Id3 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    520
+Attributes:   7
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              Irritability=Yes
+              partial paresis=Yes
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Id3
+
+
+Polyuria=Yes = 0
+|  Gender=Female = 0
+|  |  Polydipsia=No = 0
+|  |  |  Irritability=Yes = 0
+|  |  |  |  partial paresis=Yes = 0: Positive
+|  |  |  |  partial paresis=Yes = 1
+|  |  |  |  |  sudden weight loss=Yes = 0: Negative
+|  |  |  |  |  sudden weight loss=Yes = 1: Negative
+|  |  |  Irritability=Yes = 1: Positive
+|  |  Polydipsia=No = 1
+|  |  |  Irritability=Yes = 0
+|  |  |  |  partial paresis=Yes = 0
+|  |  |  |  |  sudden weight loss=Yes = 0: Negative
+|  |  |  |  |  sudden weight loss=Yes = 1: Negative
+|  |  |  |  partial paresis=Yes = 1: Negative
+|  |  |  Irritability=Yes = 1
+|  |  |  |  partial paresis=Yes = 0
+|  |  |  |  |  sudden weight loss=Yes = 0: Negative
+|  |  |  |  |  sudden weight loss=Yes = 1: Positive
+|  |  |  |  partial paresis=Yes = 1: Negative
+|  Gender=Female = 1
+|  |  sudden weight loss=Yes = 0
+|  |  |  partial paresis=Yes = 0
+|  |  |  |  Irritability=Yes = 0: Negative
+|  |  |  |  Irritability=Yes = 1: Negative
+|  |  |  partial paresis=Yes = 1
+|  |  |  |  Polydipsia=No = 0: Positive
+|  |  |  |  Polydipsia=No = 1: Positive
+|  |  sudden weight loss=Yes = 1
+|  |  |  Polydipsia=No = 0: Positive
+|  |  |  Polydipsia=No = 1
+|  |  |  |  partial paresis=Yes = 0: Positive
+|  |  |  |  partial paresis=Yes = 1: Positive
+Polyuria=Yes = 1
+|  Polydipsia=No = 0: Positive
+|  Polydipsia=No = 1
+|  |  Gender=Female = 0
+|  |  |  sudden weight loss=Yes = 0
+|  |  |  |  partial paresis=Yes = 0
+|  |  |  |  |  Irritability=Yes = 0: Positive
+|  |  |  |  |  Irritability=Yes = 1: Negative
+|  |  |  |  partial paresis=Yes = 1
+|  |  |  |  |  Irritability=Yes = 0: Negative
+|  |  |  |  |  Irritability=Yes = 1: Positive
+|  |  |  sudden weight loss=Yes = 1
+|  |  |  |  Irritability=Yes = 0
+|  |  |  |  |  partial paresis=Yes = 0: Negative
+|  |  |  |  |  partial paresis=Yes = 1: Positive
+|  |  |  |  Irritability=Yes = 1: Positive
+|  |  Gender=Female = 1: Positive
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         469               90.1923 %
+Incorrectly Classified Instances        51                9.8077 %
+Kappa statistic                          0.7953
+Mean absolute error                      0.1145
+Root mean squared error                  0.2502
+Relative absolute error                 24.1783 %
+Root relative squared error             51.4261 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,900    0,095    0,938      0,900    0,919      0,796    0,963     0,979     Positive
+                 0,905    0,100    0,850      0,905    0,877      0,796    0,963     0,901     Negative
+Weighted Avg.    0,902    0,097    0,904      0,902    0,902      0,796    0,963     0,949     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 288  32 |   a = Positive
+  19 181 |   b = Negative
+

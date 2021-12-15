@@ -1,0 +1,245 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Stacking -X 10 -M "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4" -S 1 -num-slots 1 -B "weka.classifiers.functions.LDA -R 1.0E-6" -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5"
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.meta.Stacking -F 2 -T 0.01 -R 1 -E DEFAULT -- -X 10 -M "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4" -S 1 -num-slots 1 -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5" -B "weka.classifiers.functions.LDA -R 1.0E-6"-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   11
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              Genital thrush
+              Itching
+              Irritability
+              delayed healing
+              muscle stiffness
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Stacking
+
+Base classifiers
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: 0.7659848368582125
+
+Mean vector:
+
+        10                  10
+         1  4,328222461538e-01
+         2  3,692307692308e-01
+         3  4,961538461538e-01
+         4  4,480769230769e-01
+         5  2,230769230769e-01
+         6  4,865384615385e-01
+         7  2,423076923077e-01
+         8  4,596153846154e-01
+         9  3,750000000000e-01
+        10  3,442307692308e-01
+
+Inverse of covariance matrix:
+
+  50,64  1,28 -2,03 -1,31  0,16 -2,26 -1,38 -0,45 -3,66 -5,19
+  1,28  6,57  0,32  0,40  1,75 -0,73  0,68 -1,04 -0,04  1,48
+ -2,03  0,32  8,16 -2,23  0,05 -0,00 -0,08 -0,60 -0,00 -0,12
+ -1,31  0,40 -2,23  8,56  0,25 -1,14  0,12 -0,42 -0,40  2,12
+  0,16  1,75  0,05  0,25  6,99 -0,56 -0,63 -0,65  1,03 -0,75
+ -2,26 -0,73 -0,00 -1,14 -0,56  5,63 -0,23 -1,77 -0,41 -0,93
+ -1,38  0,68 -0,08  0,12 -0,63 -0,23  6,51 -0,18 -0,81 -0,09
+ -0,45 -1,04 -0,60 -0,42 -0,65 -1,77 -0,18  5,77 -0,83 -1,43
+ -3,66 -0,04 -0,00 -0,40  1,03 -0,41 -0,81 -0,83  5,25  0,26
+ -5,19  1,48 -0,12  2,12 -0,75 -0,93 -0,09 -1,43  0,26  7,04
+
+
+
+Estimates for class value Positive
+
+Natural logarithm of class prior probability: -0.49
+Class prior probability: 0.62
+
+Mean vector:
+
+Age: 0.45
+Gender: 0.54
+Polyuria: 0.76
+Polydipsia: 0.7
+Genital thrush: 0.26
+Itching: 0.48
+Irritability: 0.34
+delayed healing: 0.48
+muscle stiffness: 0.42
+Alopecia: 0.24
+
+Estimates for class value Negative
+
+Natural logarithm of class prior probability: -0.96
+Class prior probability: 0.38
+
+Mean vector:
+
+Age: 0.41
+Gender: 0.1
+Polyuria: 0.07
+Polydipsia: 0.04
+Genital thrush: 0.17
+Itching: 0.5
+Irritability: 0.08
+delayed healing: 0.43
+muscle stiffness: 0.3
+Alopecia: 0.51
+
+
+
+Naive Bayes Classifier
+
+                      Class
+Attribute          Positive Negative
+                     (0.61)   (0.39)
+=====================================
+Age
+  mean                0.4477   0.4091
+  std. dev.           0.1627   0.1639
+  weight sum             320      200
+  precision             0.02     0.02
+
+Gender
+  mean                0.5406    0.095
+  std. dev.           0.4983   0.2932
+  weight sum             320      200
+  precision                1        1
+
+Polyuria
+  mean                0.7594    0.075
+  std. dev.           0.4275   0.2634
+  weight sum             320      200
+  precision                1        1
+
+Polydipsia
+  mean                0.7031     0.04
+  std. dev.           0.4569    0.196
+  weight sum             320      200
+  precision                1        1
+
+Genital thrush
+  mean                0.2594    0.165
+  std. dev.           0.4383   0.3712
+  weight sum             320      200
+  precision                1        1
+
+Itching
+  mean                0.4813    0.495
+  std. dev.           0.4996      0.5
+  weight sum             320      200
+  precision                1        1
+
+Irritability
+  mean                0.3438     0.08
+  std. dev.            0.475   0.2713
+  weight sum             320      200
+  precision                1        1
+
+delayed healing
+  mean                0.4781     0.43
+  std. dev.           0.4995   0.4951
+  weight sum             320      200
+  precision                1        1
+
+muscle stiffness
+  mean                0.4219      0.3
+  std. dev.           0.4939   0.4583
+  weight sum             320      200
+  precision                1        1
+
+Alopecia
+  mean                0.2437    0.505
+  std. dev.           0.4293      0.5
+  weight sum             320      200
+  precision                1        1
+
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=11 #classindex=10
+Network structure (nodes followed by parents)
+Age(1): class Gender 
+Gender(2): class Alopecia 
+Polyuria(2): class Alopecia 
+Polydipsia(2): class Polyuria 
+Genital thrush(1): class Age 
+Itching(1): class Age 
+Irritability(2): class Alopecia 
+delayed healing(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(2): class 
+class(2): 
+LogScore Bayes: -1650.324213728828
+LogScore BDeu: -1677.739463043034
+LogScore MDL: -1680.3478048597103
+LogScore ENTROPY: -1620.9364311497432
+LogScore AIC: -1639.9364311497432
+
+
+
+
+Meta classifier
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                                   Class
+Variable                                        Positive
+========================================================
+weka.classifiers.functions.LDA-1:Positive          2.479
+weka.classifiers.functions.LDA-1:Negative         -2.479
+weka.classifiers.bayes.NaiveBayes-2:Positive     -0.6971
+weka.classifiers.bayes.NaiveBayes-2:Negative      0.6971
+weka.classifiers.bayes.BayesNet-3:Positive        2.1128
+weka.classifiers.bayes.BayesNet-3:Negative       -2.1128
+Intercept                                         0.8612
+
+
+Odds Ratios...
+                                                   Class
+Variable                                        Positive
+========================================================
+weka.classifiers.functions.LDA-1:Positive         11.929
+weka.classifiers.functions.LDA-1:Negative         0.0838
+weka.classifiers.bayes.NaiveBayes-2:Positive       0.498
+weka.classifiers.bayes.NaiveBayes-2:Negative      2.0079
+weka.classifiers.bayes.BayesNet-3:Positive        8.2717
+weka.classifiers.bayes.BayesNet-3:Negative        0.1209
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         476               91.5385 %
+Incorrectly Classified Instances        44                8.4615 %
+Kappa statistic                          0.8222
+Mean absolute error                      0.1216
+Root mean squared error                  0.253 
+Relative absolute error                 25.683  %
+Root relative squared error             51.9942 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,095    0,939      0,922    0,931      0,822    0,966     0,980     Positive
+                 0,905    0,078    0,879      0,905    0,892      0,822    0,966     0,923     Negative
+Weighted Avg.    0,915    0,089    0,916      0,915    0,916      0,822    0,966     0,958     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 295  25 |   a = Positive
+  19 181 |   b = Negative
+

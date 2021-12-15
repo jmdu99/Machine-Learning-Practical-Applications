@@ -1,0 +1,124 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 50 -S 1 -I 10 -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R6-16
+Instances:    520
+Attributes:   6
+              Polyuria
+              Polydipsia
+              Gender
+              sudden weight loss
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Bayes Network Classifier
+not using ADTree
+#attributes=6 #classindex=5
+Network structure (nodes followed by parents)
+Polyuria(2): class sudden weight loss 
+Polydipsia(2): class Polyuria 
+Gender(2): class partial paresis 
+sudden weight loss(2): class 
+partial paresis(2): class Polydipsia 
+class(2): 
+LogScore Bayes: -1687.0903160343164
+LogScore BDeu: -1714.5055653485224
+LogScore MDL: -1716.202619307557
+LogScore ENTROPY: -1656.79124559759
+LogScore AIC: -1675.79124559759
+
+
+Weight: 2.2
+
+Bayes Network Classifier
+not using ADTree
+#attributes=6 #classindex=5
+Network structure (nodes followed by parents)
+Polyuria(2): class 
+Polydipsia(2): class Polyuria 
+Gender(1): class Polyuria 
+sudden weight loss(2): class Gender 
+partial paresis(2): class Gender 
+class(2): 
+LogScore Bayes: -633.7156742870162
+LogScore BDeu: -645.2937128289891
+LogScore MDL: -642.139943367701
+LogScore ENTROPY: -620.4081029155029
+LogScore AIC: -631.4081029155029
+
+
+Weight: 0.1
+
+Bayes Network Classifier
+not using ADTree
+#attributes=6 #classindex=5
+Network structure (nodes followed by parents)
+Polyuria(2): class Polydipsia 
+Polydipsia(2): class Gender 
+Gender(2): class 
+sudden weight loss(1): class Polyuria 
+partial paresis(1): class Polyuria 
+class(2): 
+LogScore Bayes: -1179.9284817936352
+LogScore BDeu: -1194.49505667136
+LogScore MDL: -1196.0431297972189
+LogScore ENTROPY: -1162.2030999763463
+LogScore AIC: -1173.2030999763463
+
+
+Weight: 0.88
+
+Bayes Network Classifier
+not using ADTree
+#attributes=6 #classindex=5
+Network structure (nodes followed by parents)
+Polyuria(1): class 
+Polydipsia(2): class Polyuria 
+Gender(1): class Polyuria 
+sudden weight loss(2): class Polyuria 
+partial paresis(2): class Polyuria 
+class(2): 
+LogScore Bayes: -507.43632786153535
+LogScore BDeu: -512.5900291852677
+LogScore MDL: -510.67345886696535
+LogScore ENTROPY: -496.84410585193035
+LogScore AIC: -503.84410585193035
+
+
+Weight: 0.07
+
+Number of performed Iterations: 4
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         468               90      %
+Incorrectly Classified Instances        52               10      %
+Kappa statistic                          0.7907
+Mean absolute error                      0.158 
+Root mean squared error                  0.2887
+Relative absolute error                 33.3705 %
+Root relative squared error             59.3507 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,903    0,105    0,932      0,903    0,917      0,791    0,930     0,951     Positive
+                 0,895    0,097    0,852      0,895    0,873      0,791    0,930     0,846     Negative
+Weighted Avg.    0,900    0,102    0,902      0,900    0,900      0,791    0,930     0,911     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 289  31 |   a = Positive
+  21 179 |   b = Negative
+

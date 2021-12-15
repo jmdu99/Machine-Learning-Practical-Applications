@@ -1,0 +1,146 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 1000 -V 0 -S 20 -E 20 -H t
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              Irritability=Yes
+              partial paresis=Yes
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -1.3010780675941211
+    Node 2    2.9478938314046217
+    Node 3    3.614189417979384
+    Node 4    0.5828583010467799
+    Node 5    4.216276336615465
+    Node 6    0.5649803858367154
+    Node 7    1.2596825108955356
+    Node 8    2.326570562716632
+    Node 9    -3.577154426597468
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    1.300995347886262
+    Node 2    -2.947864810798639
+    Node 3    -3.614897409712262
+    Node 4    -0.5828159395922242
+    Node 5    -4.216536168742597
+    Node 6    -0.5646836377593564
+    Node 7    -1.2596376388907635
+    Node 8    -2.324558225883477
+    Node 9    3.5774686767933956
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -1.0273779357788793
+    Attrib Gender=Female    5.345232779983547
+    Attrib Polyuria=Yes    2.0937231979497346
+    Attrib Polydipsia=No    1.9246396087632698
+    Attrib sudden weight loss=Yes    3.9684058158505477
+    Attrib Irritability=Yes    1.8008608567875601
+    Attrib partial paresis=Yes    4.618889526407677
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -2.043548596232467
+    Attrib Gender=Female    4.026533572222278
+    Attrib Polyuria=Yes    0.7207028483992454
+    Attrib Polydipsia=No    0.9812486192386908
+    Attrib sudden weight loss=Yes    6.528871539426574
+    Attrib Irritability=Yes    4.103715718538774
+    Attrib partial paresis=Yes    2.5814646371481484
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.6477097750372207
+    Attrib Gender=Female    3.378288879144346
+    Attrib Polyuria=Yes    1.4271081356118662
+    Attrib Polydipsia=No    -3.0480449090768293
+    Attrib sudden weight loss=Yes    -0.430480049442153
+    Attrib Irritability=Yes    -0.202616456611122
+    Attrib partial paresis=Yes    -2.616304515517422
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.4406840287534816
+    Attrib Gender=Female    -4.298033968336171
+    Attrib Polyuria=Yes    6.097879127854277
+    Attrib Polydipsia=No    -2.4291216071546105
+    Attrib sudden weight loss=Yes    -0.11213879184834492
+    Attrib Irritability=Yes    7.615687223376023
+    Attrib partial paresis=Yes    -2.938493728827671
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.5993839874509257
+    Attrib Gender=Female    2.576866503104271
+    Attrib Polyuria=Yes    -1.206598187277885
+    Attrib Polydipsia=No    -1.558684860199274
+    Attrib sudden weight loss=Yes    2.0878421072073636
+    Attrib Irritability=Yes    2.4708221585225103
+    Attrib partial paresis=Yes    -1.0209623462276411
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -1.931636887076945
+    Attrib Gender=Female    1.2776708444131564
+    Attrib Polyuria=Yes    0.6695683522425357
+    Attrib Polydipsia=No    -5.172143061273961
+    Attrib sudden weight loss=Yes    0.8279578370257782
+    Attrib Irritability=Yes    1.1352663943349295
+    Attrib partial paresis=Yes    -3.098548806330054
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.8988130676253503
+    Attrib Gender=Female    2.9440197995510773
+    Attrib Polyuria=Yes    3.388984507151311
+    Attrib Polydipsia=No    -2.160237893749345
+    Attrib sudden weight loss=Yes    1.215516198932706
+    Attrib Irritability=Yes    1.3196900273094803
+    Attrib partial paresis=Yes    2.2511444674254446
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -4.212949808281394
+    Attrib Gender=Female    -3.8158870421670166
+    Attrib Polyuria=Yes    -3.6455945048495657
+    Attrib Polydipsia=No    6.0442600699857385
+    Attrib sudden weight loss=Yes    4.077772480856846
+    Attrib Irritability=Yes    4.141259014769786
+    Attrib partial paresis=Yes    -2.2889656037790473
+Class Positive
+    Input
+    Node 0
+Class Negative
+    Input
+    Node 1
+
+
+Time taken to build model: 0.53 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         469               90.1923 %
+Incorrectly Classified Instances        51                9.8077 %
+Kappa statistic                          0.7957
+Mean absolute error                      0.1178
+Root mean squared error                  0.2601
+Relative absolute error                 24.8823 %
+Root relative squared error             53.4678 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,897    0,090    0,941      0,897    0,918      0,797    0,960     0,977     Positive
+                 0,910    0,103    0,847      0,910    0,877      0,797    0,960     0,901     Negative
+Weighted Avg.    0,902    0,095    0,905      0,902    0,903      0,797    0,960     0,948     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 287  33 |   a = Positive
+  18 182 |   b = Negative
+

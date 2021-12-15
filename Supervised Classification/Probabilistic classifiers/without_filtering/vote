@@ -1,0 +1,336 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Vote -S 1 -B "weka.classifiers.functions.LDA -R 1.0E-6" -B "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4" -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5" -R AVG
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Vote combines the probability distributions of these base learners:
+	weka.classifiers.functions.LDA -R 1.0E-6
+	weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+	weka.classifiers.bayes.NaiveBayes 
+	weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+using the 'Average' combination rule 
+
+All the models:
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: 0.8119274323855716
+
+Mean vector:
+
+        16                  16
+         1  4,328222461538e-01
+         2  3,692307692308e-01
+         3  4,961538461538e-01
+         4  4,480769230769e-01
+         5  4,173076923077e-01
+         6  5,865384615385e-01
+         7  4,557692307692e-01
+         8  2,230769230769e-01
+         9  4,480769230769e-01
+        10  4,865384615385e-01
+        11  2,423076923077e-01
+        12  4,596153846154e-01
+        13  4,307692307692e-01
+        14  3,750000000000e-01
+        15  3,442307692308e-01
+        16  1,692307692308e-01
+
+Inverse of covariance matrix:
+
+  59,00  2,17 -0,99  0,14 -0,25 -0,01 -3,26 -1,79 -5,12 -1,45 -1,35  0,07 -2,78 -1,50 -5,72 -1,82
+  2,17  6,76  0,62  0,61 -0,79  0,24 -0,23  1,62 -0,54 -0,72  0,67 -0,99 -0,44  0,18  1,32 -0,19
+ -0,99  0,62  8,86 -1,96 -1,25  0,12 -0,80 -0,10  0,28 -0,16  0,11 -0,34 -1,16  0,21 -0,46 -0,64
+  0,14  0,61 -1,96  9,14 -0,57 -1,02 -0,07 -0,07 -1,07 -0,85  0,07 -0,21 -0,56  0,09  2,11 -0,34
+ -0,25 -0,79 -1,25 -0,57  6,10 -1,19 -0,44 -0,66  0,85  0,43  0,16 -0,10 -0,11 -0,14  0,62 -1,02
+ -0,01  0,24  0,12 -1,02 -1,19  5,84  0,48  0,27 -0,64 -0,79 -0,13 -1,00 -0,44 -0,54 -0,68  0,18
+ -3,26 -0,23 -0,80 -0,07 -0,44  0,48  5,92  0,59 -0,23  0,09 -0,68 -0,95 -0,60 -0,89  0,27  0,41
+ -1,79  1,62 -0,10 -0,07 -0,66  0,27  0,59  7,75  0,91 -0,84 -0,61 -0,98  1,52  0,66 -0,54 -0,25
+ -5,12 -0,54  0,28 -1,07  0,85 -0,64 -0,23  0,91  6,73 -0,99  0,73  0,41 -0,79 -1,56 -0,13 -0,44
+ -1,45 -0,72 -0,16 -0,85  0,43 -0,79  0,09 -0,84 -0,99  5,95 -0,35 -1,69  0,01 -0,11 -0,80  0,18
+ -1,35  0,67  0,11  0,07  0,16 -0,13 -0,68 -0,61  0,73 -0,35  6,71 -0,08 -0,18 -0,81 -0,13 -0,66
+  0,07 -0,99 -0,34 -0,21 -0,10 -1,00 -0,95 -0,98  0,41 -1,69 -0,08  6,34 -0,69 -0,75 -1,59  0,89
+ -2,78 -0,44 -1,16 -0,56 -0,11 -0,44 -0,60  1,52 -0,79  0,01 -0,18 -0,69  6,84 -0,04  1,09  0,63
+ -1,50  0,18  0,21  0,09 -0,14 -0,54 -0,89  0,66 -1,56 -0,11 -0,81 -0,75 -0,04  5,96  0,30 -0,88
+ -5,72  1,32 -0,46  2,11  0,62 -0,68  0,27 -0,54 -0,13 -0,80 -0,13 -1,59  1,09  0,30  7,38 -0,35
+ -1,82 -0,19 -0,64 -0,34 -1,02  0,18  0,41 -0,25 -0,44  0,18 -0,66  0,89  0,63 -0,88 -0,35  7,97
+
+
+
+Estimates for class value Positive
+
+Natural logarithm of class prior probability: -0.49
+Class prior probability: 0.62
+
+Mean vector:
+
+Age: 0.45
+Gender: 0.54
+Polyuria: 0.76
+Polydipsia: 0.7
+sudden weight loss: 0.59
+weakness: 0.68
+Polyphagia: 0.59
+Genital thrush: 0.26
+visual blurring: 0.55
+Itching: 0.48
+Irritability: 0.34
+delayed healing: 0.48
+partial paresis: 0.6
+muscle stiffness: 0.42
+Alopecia: 0.24
+Obesity: 0.19
+
+Estimates for class value Negative
+
+Natural logarithm of class prior probability: -0.96
+Class prior probability: 0.38
+
+Mean vector:
+
+Age: 0.41
+Gender: 0.1
+Polyuria: 0.07
+Polydipsia: 0.04
+sudden weight loss: 0.15
+weakness: 0.44
+Polyphagia: 0.24
+Genital thrush: 0.17
+visual blurring: 0.29
+Itching: 0.5
+Irritability: 0.08
+delayed healing: 0.43
+partial paresis: 0.16
+muscle stiffness: 0.3
+Alopecia: 0.51
+Obesity: 0.14
+
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                         Class
+Variable              Positive
+==============================
+Age                    -3.7864
+Gender                  4.3512
+Polyuria                4.4395
+Polydipsia              5.0704
+sudden weight loss      0.1903
+weakness                0.8171
+Polyphagia              1.1938
+Genital thrush          1.8636
+visual blurring         0.9159
+Itching                -2.8029
+Irritability            2.3407
+delayed healing        -0.3916
+partial paresis         1.1593
+muscle stiffness       -0.7288
+Alopecia                0.1504
+Obesity                 -0.289
+Intercept              -2.4233
+
+
+Odds Ratios...
+                         Class
+Variable              Positive
+==============================
+Age                     0.0227
+Gender                 77.5694
+Polyuria               84.7348
+Polydipsia            159.2423
+sudden weight loss      1.2096
+weakness                2.2638
+Polyphagia              3.2995
+Genital thrush          6.4471
+visual blurring          2.499
+Itching                 0.0606
+Irritability           10.3888
+delayed healing         0.6759
+partial paresis         3.1877
+muscle stiffness        0.4825
+Alopecia                1.1623
+Obesity                  0.749
+
+Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.61)   (0.39)
+=======================================
+Age
+  mean                  0.4477   0.4091
+  std. dev.             0.1627   0.1639
+  weight sum               320      200
+  precision               0.02     0.02
+
+Gender
+  mean                  0.5406    0.095
+  std. dev.             0.4983   0.2932
+  weight sum               320      200
+  precision                  1        1
+
+Polyuria
+  mean                  0.7594    0.075
+  std. dev.             0.4275   0.2634
+  weight sum               320      200
+  precision                  1        1
+
+Polydipsia
+  mean                  0.7031     0.04
+  std. dev.             0.4569    0.196
+  weight sum               320      200
+  precision                  1        1
+
+sudden weight loss
+  mean                  0.5875    0.145
+  std. dev.             0.4923   0.3521
+  weight sum               320      200
+  precision                  1        1
+
+weakness
+  mean                  0.6813    0.435
+  std. dev.              0.466   0.4958
+  weight sum               320      200
+  precision                  1        1
+
+Polyphagia
+  mean                  0.5906     0.24
+  std. dev.             0.4917   0.4271
+  weight sum               320      200
+  precision                  1        1
+
+Genital thrush
+  mean                  0.2594    0.165
+  std. dev.             0.4383   0.3712
+  weight sum               320      200
+  precision                  1        1
+
+visual blurring
+  mean                  0.5469     0.29
+  std. dev.             0.4978   0.4538
+  weight sum               320      200
+  precision                  1        1
+
+Itching
+  mean                  0.4813    0.495
+  std. dev.             0.4996      0.5
+  weight sum               320      200
+  precision                  1        1
+
+Irritability
+  mean                  0.3438     0.08
+  std. dev.              0.475   0.2713
+  weight sum               320      200
+  precision                  1        1
+
+delayed healing
+  mean                  0.4781     0.43
+  std. dev.             0.4995   0.4951
+  weight sum               320      200
+  precision                  1        1
+
+partial paresis
+  mean                     0.6     0.16
+  std. dev.             0.4899   0.3666
+  weight sum               320      200
+  precision                  1        1
+
+muscle stiffness
+  mean                  0.4219      0.3
+  std. dev.             0.4939   0.4583
+  weight sum               320      200
+  precision                  1        1
+
+Alopecia
+  mean                  0.2437    0.505
+  std. dev.             0.4293      0.5
+  weight sum               320      200
+  precision                  1        1
+
+Obesity
+  mean                  0.1906    0.135
+  std. dev.             0.3928   0.3417
+  weight sum               320      200
+  precision                  1        1
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(1): class Gender 
+Gender(2): class Alopecia 
+Polyuria(2): class Polydipsia 
+Polydipsia(2): class weakness 
+sudden weight loss(2): class Polyuria 
+weakness(2): class 
+Polyphagia(2): class visual blurring 
+Genital thrush(1): class Age 
+visual blurring(2): class weakness 
+Itching(1): class Age 
+Irritability(2): class Alopecia 
+delayed healing(1): class Age 
+partial paresis(2): class visual blurring 
+muscle stiffness(1): class Age 
+Alopecia(2): class weakness 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -3188.0164380951824
+LogScore BDeu: -3247.55337350059
+LogScore MDL: -3244.5403137978346
+LogScore ENTROPY: -3122.590651972114
+LogScore AIC: -3161.590651972114
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         467               89.8077 %
+Incorrectly Classified Instances        53               10.1923 %
+Kappa statistic                          0.7865
+Mean absolute error                      0.1291
+Root mean squared error                  0.2588
+Relative absolute error                 27.2626 %
+Root relative squared error             53.2037 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,903    0,110    0,929      0,903    0,916      0,787    0,970     0,983     Positive
+                 0,890    0,097    0,852      0,890    0,870      0,787    0,970     0,941     Negative
+Weighted Avg.    0,898    0,105    0,899      0,898    0,898      0,787    0,970     0,967     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 289  31 |   a = Positive
+  22 178 |   b = Negative
+

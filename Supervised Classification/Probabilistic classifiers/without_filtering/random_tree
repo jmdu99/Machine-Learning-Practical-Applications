@@ -1,0 +1,157 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+sudden weight loss < 0.5
+|   Polydipsia < 0.5
+|   |   Gender < 0.5
+|   |   |   Irritability < 0.5
+|   |   |   |   visual blurring < 0.5
+|   |   |   |   |   Age < 0.34
+|   |   |   |   |   |   delayed healing < 0.5
+|   |   |   |   |   |   |   Polyuria < 0.5 : Negative (47/0)
+|   |   |   |   |   |   |   Polyuria >= 0.5 : Positive (2/0)
+|   |   |   |   |   |   delayed healing >= 0.5 : Positive (5/0)
+|   |   |   |   |   Age >= 0.34 : Negative (54/0)
+|   |   |   |   visual blurring >= 0.5
+|   |   |   |   |   muscle stiffness < 0.5
+|   |   |   |   |   |   delayed healing < 0.5 : Positive (6/0)
+|   |   |   |   |   |   delayed healing >= 0.5
+|   |   |   |   |   |   |   Age < 0.49 : Positive (1/0)
+|   |   |   |   |   |   |   Age >= 0.49 : Negative (1/0)
+|   |   |   |   |   muscle stiffness >= 0.5 : Negative (31/0)
+|   |   |   Irritability >= 0.5
+|   |   |   |   Polyuria < 0.5
+|   |   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   |   muscle stiffness < 0.5 : Negative (7/0)
+|   |   |   |   |   |   muscle stiffness >= 0.5
+|   |   |   |   |   |   |   delayed healing < 0.5 : Positive (2/0)
+|   |   |   |   |   |   |   delayed healing >= 0.5 : Negative (4/0)
+|   |   |   |   |   Genital thrush >= 0.5 : Positive (4/0)
+|   |   |   |   Polyuria >= 0.5
+|   |   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   |   delayed healing < 0.5 : Positive (2/0)
+|   |   |   |   |   |   delayed healing >= 0.5 : Negative (4/0)
+|   |   |   |   |   Genital thrush >= 0.5 : Positive (5/0)
+|   |   Gender >= 0.5
+|   |   |   delayed healing < 0.5
+|   |   |   |   Age < 0.28
+|   |   |   |   |   visual blurring < 0.5
+|   |   |   |   |   |   partial paresis < 0.5
+|   |   |   |   |   |   |   Irritability < 0.5
+|   |   |   |   |   |   |   |   Age < 0.25 : Negative (3/0)
+|   |   |   |   |   |   |   |   Age >= 0.25 : Positive (5/0)
+|   |   |   |   |   |   |   Irritability >= 0.5 : Negative (1/0)
+|   |   |   |   |   |   partial paresis >= 0.5 : Negative (1/0)
+|   |   |   |   |   visual blurring >= 0.5 : Positive (6/0)
+|   |   |   |   Age >= 0.28 : Positive (15/0)
+|   |   |   delayed healing >= 0.5 : Negative (13/0)
+|   Polydipsia >= 0.5
+|   |   weakness < 0.5
+|   |   |   Gender < 0.5
+|   |   |   |   Itching < 0.5 : Positive (11/0)
+|   |   |   |   Itching >= 0.5
+|   |   |   |   |   Polyuria < 0.5
+|   |   |   |   |   |   visual blurring < 0.5 : Negative (1/0)
+|   |   |   |   |   |   visual blurring >= 0.5
+|   |   |   |   |   |   |   muscle stiffness < 0.5 : Positive (1/0)
+|   |   |   |   |   |   |   muscle stiffness >= 0.5 : Negative (3/0)
+|   |   |   |   |   Polyuria >= 0.5 : Positive (6/0)
+|   |   |   Gender >= 0.5 : Positive (6/0)
+|   |   weakness >= 0.5
+|   |   |   Polyuria < 0.5
+|   |   |   |   Irritability < 0.5
+|   |   |   |   |   Age < 0.43 : Positive (1/0)
+|   |   |   |   |   Age >= 0.43 : Negative (1/0)
+|   |   |   |   Irritability >= 0.5 : Positive (9/0)
+|   |   |   Polyuria >= 0.5 : Positive (45/0)
+sudden weight loss >= 0.5
+|   Polyuria < 0.5
+|   |   visual blurring < 0.5
+|   |   |   Polyphagia < 0.5
+|   |   |   |   Itching < 0.5
+|   |   |   |   |   Genital thrush < 0.5
+|   |   |   |   |   |   Age < 0.28 : Negative (5/0)
+|   |   |   |   |   |   Age >= 0.28
+|   |   |   |   |   |   |   Age < 0.39
+|   |   |   |   |   |   |   |   Gender < 0.5 : Negative (6/0)
+|   |   |   |   |   |   |   |   Gender >= 0.5 : Positive (1/0)
+|   |   |   |   |   |   |   Age >= 0.39
+|   |   |   |   |   |   |   |   Age < 0.52 : Positive (1/0)
+|   |   |   |   |   |   |   |   Age >= 0.52 : Negative (1/0)
+|   |   |   |   |   Genital thrush >= 0.5 : Negative (7/0)
+|   |   |   |   Itching >= 0.5 : Positive (1/0)
+|   |   |   Polyphagia >= 0.5 : Positive (8/0)
+|   |   visual blurring >= 0.5
+|   |   |   muscle stiffness < 0.5 : Positive (10/0)
+|   |   |   muscle stiffness >= 0.5
+|   |   |   |   Age < 0.41 : Negative (3/0)
+|   |   |   |   Age >= 0.41
+|   |   |   |   |   Polydipsia < 0.5 : Negative (3/0)
+|   |   |   |   |   Polydipsia >= 0.5 : Positive (6/0)
+|   Polyuria >= 0.5
+|   |   Polyphagia < 0.5
+|   |   |   Polydipsia < 0.5
+|   |   |   |   delayed healing < 0.5 : Positive (10/0)
+|   |   |   |   delayed healing >= 0.5
+|   |   |   |   |   partial paresis < 0.5 : Negative (4/0)
+|   |   |   |   |   partial paresis >= 0.5 : Positive (5/0)
+|   |   |   Polydipsia >= 0.5 : Positive (35/0)
+|   |   Polyphagia >= 0.5 : Positive (111/0)
+
+Size of the tree : 97
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         497               95.5769 %
+Incorrectly Classified Instances        23                4.4231 %
+Kappa statistic                          0.9072
+Mean absolute error                      0.0442
+Root mean squared error                  0.2103
+Relative absolute error                  9.3415 %
+Root relative squared error             43.229  %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,953    0,040    0,974      0,953    0,964      0,908    0,957     0,958     Positive
+                 0,960    0,047    0,928      0,960    0,943      0,908    0,957     0,906     Negative
+Weighted Avg.    0,956    0,043    0,956      0,956    0,956      0,908    0,957     0,938     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 305  15 |   a = Positive
+   8 192 |   b = Negative
+

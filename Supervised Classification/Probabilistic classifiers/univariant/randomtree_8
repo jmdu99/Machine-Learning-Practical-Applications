@@ -1,0 +1,145 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R9-16
+Instances:    520
+Attributes:   9
+              Polyuria
+              Polydipsia
+              Gender
+              sudden weight loss
+              partial paresis
+              Irritability
+              Polyphagia
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+Polyuria < 0.5
+|   Irritability < 0.5
+|   |   Gender < 0.5
+|   |   |   Alopecia < 0.5
+|   |   |   |   partial paresis < 0.5
+|   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   Polydipsia < 0.5 : Negative (62/0)
+|   |   |   |   |   |   Polydipsia >= 0.5 : Positive (6/3)
+|   |   |   |   |   Polyphagia >= 0.5
+|   |   |   |   |   |   sudden weight loss < 0.5 : Negative (14/0)
+|   |   |   |   |   |   sudden weight loss >= 0.5 : Positive (1/0)
+|   |   |   |   partial paresis >= 0.5 : Negative (7/0)
+|   |   |   Alopecia >= 0.5
+|   |   |   |   sudden weight loss < 0.5
+|   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   Polydipsia < 0.5
+|   |   |   |   |   |   |   partial paresis < 0.5 : Negative (44/3)
+|   |   |   |   |   |   |   partial paresis >= 0.5 : Negative (4/1)
+|   |   |   |   |   |   Polydipsia >= 0.5 : Positive (4/0)
+|   |   |   |   |   Polyphagia >= 0.5
+|   |   |   |   |   |   Polydipsia < 0.5
+|   |   |   |   |   |   |   partial paresis < 0.5 : Negative (7/0)
+|   |   |   |   |   |   |   partial paresis >= 0.5 : Negative (9/1)
+|   |   |   |   |   |   Polydipsia >= 0.5 : Negative (1/0)
+|   |   |   |   sudden weight loss >= 0.5
+|   |   |   |   |   Polyphagia < 0.5 : Negative (6/0)
+|   |   |   |   |   Polyphagia >= 0.5
+|   |   |   |   |   |   Polydipsia < 0.5 : Negative (3/0)
+|   |   |   |   |   |   Polydipsia >= 0.5 : Positive (2/0)
+|   |   Gender >= 0.5
+|   |   |   sudden weight loss < 0.5
+|   |   |   |   partial paresis < 0.5
+|   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   Alopecia < 0.5 : Positive (11/3)
+|   |   |   |   |   |   Alopecia >= 0.5 : Negative (12/0)
+|   |   |   |   |   Polyphagia >= 0.5 : Positive (1/0)
+|   |   |   |   partial paresis >= 0.5
+|   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   Alopecia < 0.5 : Positive (7/0)
+|   |   |   |   |   |   Alopecia >= 0.5 : Negative (1/0)
+|   |   |   |   |   Polyphagia >= 0.5 : Positive (7/1)
+|   |   |   sudden weight loss >= 0.5
+|   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   Polydipsia < 0.5
+|   |   |   |   |   |   partial paresis < 0.5 : Positive (4/1)
+|   |   |   |   |   |   partial paresis >= 0.5 : Positive (2/0)
+|   |   |   |   |   Polydipsia >= 0.5 : Positive (4/0)
+|   |   |   |   Polyphagia >= 0.5 : Positive (6/0)
+|   Irritability >= 0.5
+|   |   Polydipsia < 0.5
+|   |   |   sudden weight loss < 0.5
+|   |   |   |   partial paresis < 0.5
+|   |   |   |   |   Alopecia < 0.5
+|   |   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   |   Gender < 0.5 : Positive (4/2)
+|   |   |   |   |   |   |   Gender >= 0.5 : Negative (1/0)
+|   |   |   |   |   |   Polyphagia >= 0.5 : Positive (2/0)
+|   |   |   |   |   Alopecia >= 0.5
+|   |   |   |   |   |   Polyphagia < 0.5 : Positive (1/0)
+|   |   |   |   |   |   Polyphagia >= 0.5 : Negative (4/0)
+|   |   |   |   partial paresis >= 0.5
+|   |   |   |   |   Alopecia < 0.5 : Negative (5/0)
+|   |   |   |   |   Alopecia >= 0.5 : Positive (1/0)
+|   |   |   sudden weight loss >= 0.5 : Positive (1/0)
+|   |   Polydipsia >= 0.5 : Positive (18/0)
+Polyuria >= 0.5
+|   Alopecia < 0.5 : Positive (187/0)
+|   Alopecia >= 0.5
+|   |   Irritability < 0.5
+|   |   |   Polydipsia < 0.5
+|   |   |   |   Gender < 0.5
+|   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   partial paresis < 0.5
+|   |   |   |   |   |   |   sudden weight loss < 0.5 : Positive (1/0)
+|   |   |   |   |   |   |   sudden weight loss >= 0.5 : Negative (4/0)
+|   |   |   |   |   |   partial paresis >= 0.5 : Positive (6/0)
+|   |   |   |   |   Polyphagia >= 0.5
+|   |   |   |   |   |   partial paresis < 0.5 : Positive (1/0)
+|   |   |   |   |   |   partial paresis >= 0.5 : Negative (8/1)
+|   |   |   |   Gender >= 0.5 : Positive (2/0)
+|   |   |   Polydipsia >= 0.5 : Positive (13/0)
+|   |   Irritability >= 0.5
+|   |   |   sudden weight loss < 0.5
+|   |   |   |   partial paresis < 0.5
+|   |   |   |   |   Gender < 0.5
+|   |   |   |   |   |   Polyphagia < 0.5
+|   |   |   |   |   |   |   Polydipsia < 0.5 : Negative (1/0)
+|   |   |   |   |   |   |   Polydipsia >= 0.5 : Positive (1/0)
+|   |   |   |   |   |   Polyphagia >= 0.5 : Negative (5/2)
+|   |   |   |   |   Gender >= 0.5 : Positive (4/0)
+|   |   |   |   partial paresis >= 0.5 : Positive (5/0)
+|   |   |   sudden weight loss >= 0.5 : Positive (20/0)
+
+Size of the tree : 93
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         484               93.0769 %
+Incorrectly Classified Instances        36                6.9231 %
+Kappa statistic                          0.8543
+Mean absolute error                      0.0788
+Root mean squared error                  0.2344
+Relative absolute error                 16.6322 %
+Root relative squared error             48.1749 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,938    0,080    0,949      0,938    0,943      0,854    0,961     0,972     Positive
+                 0,920    0,063    0,902      0,920    0,911      0,854    0,961     0,903     Negative
+Weighted Avg.    0,931    0,073    0,931      0,931    0,931      0,854    0,961     0,946     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 300  20 |   a = Positive
+  16 184 |   b = Negative
+

@@ -1,0 +1,109 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.8 -M 2
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last
+Instances:    520
+Attributes:   17
+              Age
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              weakness=No
+              Polyphagia=Yes
+              Genital thrush=Yes
+              visual blurring=Yes
+              Itching=No
+              Irritability=Yes
+              delayed healing=No
+              partial paresis=Yes
+              muscle stiffness=No
+              Alopecia=No
+              Obesity=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Polyuria=Yes <= 0
+|   Polydipsia=No <= 0
+|   |   Irritability=Yes <= 0
+|   |   |   Itching=No <= 0
+|   |   |   |   Gender=Female <= 0
+|   |   |   |   |   Alopecia=No <= 0: Positive (5.0/1.0)
+|   |   |   |   |   Alopecia=No > 0: Negative (7.0)
+|   |   |   |   Gender=Female > 0: Positive (4.0)
+|   |   |   Itching=No > 0: Positive (6.0)
+|   |   Irritability=Yes > 0: Positive (18.0)
+|   Polydipsia=No > 0
+|   |   Gender=Female <= 0
+|   |   |   Irritability=Yes <= 0
+|   |   |   |   partial paresis=Yes <= 0
+|   |   |   |   |   delayed healing=No <= 0
+|   |   |   |   |   |   Age <= 0.324324: Positive (3.0)
+|   |   |   |   |   |   Age > 0.324324: Negative (43.0/1.0)
+|   |   |   |   |   delayed healing=No > 0: Negative (91.0)
+|   |   |   |   partial paresis=Yes > 0
+|   |   |   |   |   muscle stiffness=No <= 0: Negative (13.0)
+|   |   |   |   |   muscle stiffness=No > 0: Positive (3.0/1.0)
+|   |   |   Irritability=Yes > 0
+|   |   |   |   Genital thrush=Yes <= 0
+|   |   |   |   |   Age <= 0.351351: Positive (3.0/1.0)
+|   |   |   |   |   Age > 0.351351: Negative (10.0)
+|   |   |   |   Genital thrush=Yes > 0: Positive (5.0)
+|   |   Gender=Female > 0
+|   |   |   Alopecia=No <= 0: Negative (14.0/1.0)
+|   |   |   Alopecia=No > 0
+|   |   |   |   visual blurring=Yes <= 0
+|   |   |   |   |   Age <= 0.243243: Negative (5.0)
+|   |   |   |   |   Age > 0.243243: Positive (16.0/1.0)
+|   |   |   |   visual blurring=Yes > 0: Positive (16.0)
+Polyuria=Yes > 0
+|   Polydipsia=No <= 0: Positive (193.0)
+|   Polydipsia=No > 0
+|   |   Itching=No <= 0
+|   |   |   delayed healing=No <= 0
+|   |   |   |   Alopecia=No <= 0
+|   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   Age <= 0.351351: Positive (2.0)
+|   |   |   |   |   |   Age > 0.351351: Negative (15.0)
+|   |   |   |   |   Gender=Female > 0: Positive (2.0)
+|   |   |   |   Alopecia=No > 0: Positive (5.0)
+|   |   |   delayed healing=No > 0: Positive (11.0)
+|   |   Itching=No > 0: Positive (30.0)
+
+Number of Leaves  : 	24
+
+Size of the tree : 	47
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         501               96.3462 %
+Incorrectly Classified Instances        19                3.6538 %
+Kappa statistic                          0.9233
+Mean absolute error                      0.0463
+Root mean squared error                  0.1884
+Relative absolute error                  9.7714 %
+Root relative squared error             38.7355 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,959    0,030    0,981      0,959    0,970      0,924    0,969     0,974     Positive
+                 0,970    0,041    0,937      0,970    0,953      0,924    0,969     0,931     Negative
+Weighted Avg.    0,963    0,034    0,964      0,963    0,964      0,924    0,969     0,957     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 307  13 |   a = Positive
+   6 194 |   b = Negative
+

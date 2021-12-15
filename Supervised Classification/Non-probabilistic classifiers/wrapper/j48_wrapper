@@ -1,0 +1,104 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.8 -M 2
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 3 -T 0.01 -R 1 -E DEFAULT -- -C 0.8 -M 2-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   12
+              Age
+              Gender=Female
+              Polyuria=Yes
+              Polydipsia=No
+              sudden weight loss=Yes
+              Genital thrush=Yes
+              Irritability=Yes
+              delayed healing=No
+              muscle stiffness=No
+              Alopecia=No
+              Obesity=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Polyuria=Yes <= 0
+|   Polydipsia=No <= 0
+|   |   Irritability=Yes <= 0
+|   |   |   muscle stiffness=No <= 0
+|   |   |   |   Gender=Female <= 0: Negative (8.0/1.0)
+|   |   |   |   Gender=Female > 0: Positive (3.0)
+|   |   |   muscle stiffness=No > 0: Positive (11.0/1.0)
+|   |   Irritability=Yes > 0: Positive (18.0)
+|   Polydipsia=No > 0
+|   |   Gender=Female <= 0
+|   |   |   Irritability=Yes <= 0
+|   |   |   |   delayed healing=No <= 0
+|   |   |   |   |   Age <= 0.324324: Positive (3.0)
+|   |   |   |   |   Age > 0.324324: Negative (53.0/1.0)
+|   |   |   |   delayed healing=No > 0
+|   |   |   |   |   Alopecia=No <= 0
+|   |   |   |   |   |   Age <= 0.486486: Negative (17.0)
+|   |   |   |   |   |   Age > 0.486486: Positive (2.0)
+|   |   |   |   |   Alopecia=No > 0: Negative (78.0)
+|   |   |   Irritability=Yes > 0
+|   |   |   |   Genital thrush=Yes <= 0
+|   |   |   |   |   Age <= 0.351351: Positive (3.0/1.0)
+|   |   |   |   |   Age > 0.351351: Negative (10.0)
+|   |   |   |   Genital thrush=Yes > 0: Positive (5.0)
+|   |   Gender=Female > 0
+|   |   |   Alopecia=No <= 0: Negative (14.0/1.0)
+|   |   |   Alopecia=No > 0
+|   |   |   |   Age <= 0.27027
+|   |   |   |   |   muscle stiffness=No <= 0: Positive (5.0)
+|   |   |   |   |   muscle stiffness=No > 0
+|   |   |   |   |   |   Age <= 0.243243: Negative (5.0)
+|   |   |   |   |   |   Age > 0.243243: Positive (6.0/1.0)
+|   |   |   |   Age > 0.27027: Positive (21.0)
+Polyuria=Yes > 0
+|   Polydipsia=No <= 0: Positive (193.0)
+|   Polydipsia=No > 0
+|   |   delayed healing=No <= 0
+|   |   |   Alopecia=No <= 0
+|   |   |   |   Obesity=No <= 0: Negative (8.0)
+|   |   |   |   Obesity=No > 0
+|   |   |   |   |   sudden weight loss=Yes <= 0
+|   |   |   |   |   |   Age <= 0.527027: Positive (3.0)
+|   |   |   |   |   |   Age > 0.527027: Negative (7.0)
+|   |   |   |   |   sudden weight loss=Yes > 0: Positive (6.0)
+|   |   |   Alopecia=No > 0: Positive (12.0)
+|   |   delayed healing=No > 0: Positive (29.0)
+
+Number of Leaves  : 	24
+
+Size of the tree : 	47
+
+
+Time taken to build model: 0.1 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         501               96.3462 %
+Incorrectly Classified Instances        19                3.6538 %
+Kappa statistic                          0.9232
+Mean absolute error                      0.0463
+Root mean squared error                  0.1858
+Relative absolute error                  9.7761 %
+Root relative squared error             38.1845 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,963    0,035    0,978      0,963    0,970      0,923    0,969     0,972     Positive
+                 0,965    0,038    0,941      0,965    0,953      0,923    0,969     0,938     Negative
+Weighted Avg.    0,963    0,036    0,964      0,963    0,964      0,923    0,969     0,959     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 308  12 |   a = Positive
+   7 193 |   b = Negative
+

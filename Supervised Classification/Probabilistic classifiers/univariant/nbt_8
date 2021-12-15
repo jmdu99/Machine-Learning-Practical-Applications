@@ -1,0 +1,611 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.NBTree 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R9-16
+Instances:    520
+Attributes:   9
+              Polyuria
+              Polydipsia
+              Gender
+              sudden weight loss
+              partial paresis
+              Irritability
+              Polyphagia
+              Alopecia
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+NBTree
+------------------
+
+sudden weight loss <= 0.5
+|   Alopecia <= 0.5
+|   |   Gender <= 0.5
+|   |   |   partial paresis <= 0.5
+|   |   |   |   Polyuria <= 0.5
+|   |   |   |   |   Polydipsia <= 0.5: NB 6
+|   |   |   |   |   Polydipsia > 0.5: NB 7
+|   |   |   |   Polyuria > 0.5: NB 8
+|   |   |   partial paresis > 0.5: NB 9
+|   |   Gender > 0.5: NB 10
+|   Alopecia > 0.5
+|   |   partial paresis <= 0.5: NB 12
+|   |   partial paresis > 0.5
+|   |   |   Polyuria <= 0.5: NB 14
+|   |   |   Polyuria > 0.5: NB 15
+sudden weight loss > 0.5
+|   Gender <= 0.5
+|   |   Irritability <= 0.5
+|   |   |   Alopecia <= 0.5
+|   |   |   |   Polyphagia <= 0.5: NB 20
+|   |   |   |   Polyphagia > 0.5: NB 21
+|   |   |   Alopecia > 0.5: NB 22
+|   |   Irritability > 0.5: NB 23
+|   Gender > 0.5: NB 24
+
+Leaf number: 6 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.07)   (0.93)
+=======================================
+Polyuria
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+Polydipsia
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+Gender
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+sudden weight loss
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+partial paresis
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+Irritability
+  '(-inf-0.5]'             1.0     65.0
+  '(0.5-inf)'              5.0      3.0
+  [total]                  6.0     68.0
+
+Polyphagia
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+Alopecia
+  'All'                    5.0     67.0
+  [total]                  5.0     67.0
+
+
+
+Leaf number: 7 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.56)   (0.44)
+=======================================
+Polyuria
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+Polydipsia
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+Gender
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+sudden weight loss
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+partial paresis
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+Irritability
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+Polyphagia
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+Alopecia
+  'All'                    5.0      4.0
+  [total]                  5.0      4.0
+
+
+
+Leaf number: 8 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.94)   (0.06)
+=======================================
+Polyuria
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+Polydipsia
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+Gender
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+sudden weight loss
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+partial paresis
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+Irritability
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+Polyphagia
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+Alopecia
+  'All'                   17.0      1.0
+  [total]                 17.0      1.0
+
+
+
+Leaf number: 9 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.62)   (0.38)
+=======================================
+Polyuria
+  '(-inf-0.5]'             2.0     10.0
+  '(0.5-inf)'             15.0      1.0
+  [total]                 17.0     11.0
+
+Polydipsia
+  '(-inf-0.5]'             3.0      9.0
+  '(0.5-inf)'             14.0      2.0
+  [total]                 17.0     11.0
+
+Gender
+  'All'                   16.0     10.0
+  [total]                 16.0     10.0
+
+sudden weight loss
+  'All'                   16.0     10.0
+  [total]                 16.0     10.0
+
+partial paresis
+  'All'                   16.0     10.0
+  [total]                 16.0     10.0
+
+Irritability
+  'All'                   16.0     10.0
+  [total]                 16.0     10.0
+
+Polyphagia
+  '(-inf-0.5]'             2.0     10.0
+  '(0.5-inf)'             15.0      1.0
+  [total]                 17.0     11.0
+
+Alopecia
+  'All'                   16.0     10.0
+  [total]                 16.0     10.0
+
+
+
+Leaf number: 10 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                        (0.9)    (0.1)
+=======================================
+Polyuria
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+Polydipsia
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+Gender
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+sudden weight loss
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+partial paresis
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+Irritability
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+Polyphagia
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+Alopecia
+  'All'                   53.0      6.0
+  [total]                 53.0      6.0
+
+
+
+Leaf number: 12 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.28)   (0.72)
+=======================================
+Polyuria
+  '(-inf-0.5]'            12.0     66.0
+  '(0.5-inf)'             16.0      5.0
+  [total]                 28.0     71.0
+
+Polydipsia
+  '(-inf-0.5]'            14.0     69.0
+  '(0.5-inf)'             14.0      2.0
+  [total]                 28.0     71.0
+
+Gender
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+sudden weight loss
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+partial paresis
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+Irritability
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+Polyphagia
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+Alopecia
+  'All'                   27.0     70.0
+  [total]                 27.0     70.0
+
+
+
+Leaf number: 14 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.35)   (0.65)
+=======================================
+Polyuria
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+Polydipsia
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+Gender
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+sudden weight loss
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+partial paresis
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+Irritability
+  '(-inf-0.5]'             3.0     13.0
+  '(0.5-inf)'              5.0      1.0
+  [total]                  8.0     14.0
+
+Polyphagia
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+Alopecia
+  'All'                    7.0     13.0
+  [total]                  7.0     13.0
+
+
+
+Leaf number: 15 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.56)   (0.44)
+=======================================
+Polyuria
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+Polydipsia
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+Gender
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+sudden weight loss
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+partial paresis
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+Irritability
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+Polyphagia
+  '(-inf-0.5]'             7.0      1.0
+  '(0.5-inf)'              4.0      8.0
+  [total]                 11.0      9.0
+
+Alopecia
+  'All'                   10.0      8.0
+  [total]                 10.0      8.0
+
+
+
+Leaf number: 20 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.41)   (0.59)
+=======================================
+Polyuria
+  '(-inf-0.5]'             1.0     16.0
+  '(0.5-inf)'             11.0      1.0
+  [total]                 12.0     17.0
+
+Polydipsia
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+Gender
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+sudden weight loss
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+partial paresis
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+Irritability
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+Polyphagia
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+Alopecia
+  'All'                   11.0     16.0
+  [total]                 11.0     16.0
+
+
+
+Leaf number: 21 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.95)   (0.05)
+=======================================
+Polyuria
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+Polydipsia
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+Gender
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+sudden weight loss
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+partial paresis
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+Irritability
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+Polyphagia
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+Alopecia
+  'All'                   20.0      1.0
+  [total]                 20.0      1.0
+
+
+
+Leaf number: 22 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.48)   (0.52)
+=======================================
+Polyuria
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+Polydipsia
+  '(-inf-0.5]'             4.0     14.0
+  '(0.5-inf)'             10.0      1.0
+  [total]                 14.0     15.0
+
+Gender
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+sudden weight loss
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+partial paresis
+  '(-inf-0.5]'             7.0     14.0
+  '(0.5-inf)'              7.0      1.0
+  [total]                 14.0     15.0
+
+Irritability
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+Polyphagia
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+Alopecia
+  'All'                   13.0     14.0
+  [total]                 13.0     14.0
+
+
+
+Leaf number: 23 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.97)   (0.03)
+=======================================
+Polyuria
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+Polydipsia
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+Gender
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+sudden weight loss
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+partial paresis
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+Irritability
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+Polyphagia
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+Alopecia
+  'All'                   34.0      1.0
+  [total]                 34.0      1.0
+
+
+
+Leaf number: 24 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.98)   (0.02)
+=======================================
+Polyuria
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+Polydipsia
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+Gender
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+sudden weight loss
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+partial paresis
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+Irritability
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+Polyphagia
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+Alopecia
+  'All'                  115.0      2.0
+  [total]                115.0      2.0
+
+
+
+
+Number of Leaves  : 	13
+
+Size of the tree : 	25
+
+
+Time taken to build model: 0.35 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         475               91.3462 %
+Incorrectly Classified Instances        45                8.6538 %
+Kappa statistic                          0.8177
+Mean absolute error                      0.1347
+Root mean squared error                  0.2661
+Relative absolute error                 28.4579 %
+Root relative squared error             54.6995 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,925    0,105    0,934      0,925    0,929      0,818    0,961     0,974     Positive
+                 0,895    0,075    0,882      0,895    0,888      0,818    0,961     0,926     Negative
+Weighted Avg.    0,913    0,093    0,914      0,913    0,914      0,818    0,961     0,956     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 296  24 |   a = Positive
+  21 179 |   b = Negative
+

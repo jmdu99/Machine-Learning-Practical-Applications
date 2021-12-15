@@ -1,0 +1,242 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 1000 -V 0 -S 20 -E 20 -H t
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R11-16
+Instances:    520
+Attributes:   11
+              Polyuria=Yes
+              Polydipsia=No
+              Gender=Female
+              sudden weight loss=Yes
+              partial paresis=Yes
+              Polyphagia=Yes
+              Irritability=Yes
+              Alopecia=No
+              visual blurring=Yes
+              weakness=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -4.402559925266748
+    Node 2    6.413118613798507
+    Node 3    -8.477328175339263
+    Node 4    5.211318056589147
+    Node 5    0.692199435684164
+    Node 6    5.286255793983279
+    Node 7    3.479981882626431
+    Node 8    1.5626615305588525
+    Node 9    3.3186047956801406
+    Node 10    6.381244686065819
+    Node 11    1.6700398769358924
+    Node 12    3.6321588543860406
+    Node 13    3.283103018721451
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    4.403206214844178
+    Node 2    -6.415808770988753
+    Node 3    8.47694924917358
+    Node 4    -5.212092288560602
+    Node 5    -0.6864190708466467
+    Node 6    -5.277902694205846
+    Node 7    -3.483403667467026
+    Node 8    -1.5609186970571118
+    Node 9    -3.316410938288709
+    Node 10    -6.378903338287077
+    Node 11    -1.6682528019298564
+    Node 12    -3.6335101157483414
+    Node 13    -3.298587212897637
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -3.747546631061755
+    Attrib Polyuria=Yes    -3.3288353574048624
+    Attrib Polydipsia=No    -0.9770636649008696
+    Attrib Gender=Female    2.055320402144145
+    Attrib sudden weight loss=Yes    3.498700677483291
+    Attrib partial paresis=Yes    4.100026578623265
+    Attrib Polyphagia=Yes    -2.891954263126368
+    Attrib Irritability=Yes    1.4121550215657472
+    Attrib Alopecia=No    -2.5832580368019187
+    Attrib visual blurring=Yes    4.907961887216182
+    Attrib weakness=No    1.9950917511119992
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    1.956111299901247
+    Attrib Polyuria=Yes    -4.986436614503218
+    Attrib Polydipsia=No    4.789479093482163
+    Attrib Gender=Female    1.7687633055818475
+    Attrib sudden weight loss=Yes    2.527793590650163
+    Attrib partial paresis=Yes    0.2821127470372995
+    Attrib Polyphagia=Yes    6.641950269871897
+    Attrib Irritability=Yes    -3.7439598714781934
+    Attrib Alopecia=No    0.02844421244493967
+    Attrib visual blurring=Yes    -0.9488569715725251
+    Attrib weakness=No    -3.385132507371571
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -3.78582455921006
+    Attrib Polyuria=Yes    1.3045370422515885
+    Attrib Polydipsia=No    -2.6837553361742232
+    Attrib Gender=Female    1.8872832992837778
+    Attrib sudden weight loss=Yes    -3.2696065804854175
+    Attrib partial paresis=Yes    -4.7564664179126375
+    Attrib Polyphagia=Yes    -1.678076912204694
+    Attrib Irritability=Yes    2.68597285814805
+    Attrib Alopecia=No    0.7720843593530939
+    Attrib visual blurring=Yes    -5.017141671481866
+    Attrib weakness=No    -2.4701912516282047
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.7783980686769761
+    Attrib Polyuria=Yes    1.4040721859088967
+    Attrib Polydipsia=No    -1.7874129343404443
+    Attrib Gender=Female    0.8991392934939583
+    Attrib sudden weight loss=Yes    0.6569556055264459
+    Attrib partial paresis=Yes    0.6171191159528742
+    Attrib Polyphagia=Yes    0.6208313043907455
+    Attrib Irritability=Yes    0.8619440109540667
+    Attrib Alopecia=No    -0.9308739501226512
+    Attrib visual blurring=Yes    -0.5547827510938589
+    Attrib weakness=No    -0.22817703871242423
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -1.8855982019658493
+    Attrib Polyuria=Yes    1.4548536722479346
+    Attrib Polydipsia=No    -1.4984982986762785
+    Attrib Gender=Female    2.4334807724026324
+    Attrib sudden weight loss=Yes    3.1518569645928527
+    Attrib partial paresis=Yes    -0.8368694956325782
+    Attrib Polyphagia=Yes    4.62104639042415
+    Attrib Irritability=Yes    0.36953216575157
+    Attrib Alopecia=No    1.5591673573838059
+    Attrib visual blurring=Yes    -0.9167723587032482
+    Attrib weakness=No    -3.367308959629678
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    0.6367639457363768
+    Attrib Polyuria=Yes    2.8844037670563045
+    Attrib Polydipsia=No    1.156241699365222
+    Attrib Gender=Female    2.516028963318387
+    Attrib sudden weight loss=Yes    0.2553851924499069
+    Attrib partial paresis=Yes    -0.03630645122891659
+    Attrib Polyphagia=Yes    4.729637301068573
+    Attrib Irritability=Yes    -2.628026433141603
+    Attrib Alopecia=No    4.051834565970234
+    Attrib visual blurring=Yes    0.08700495569472373
+    Attrib weakness=No    1.2106640416235572
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.9842511155133999
+    Attrib Polyuria=Yes    0.6470814781792442
+    Attrib Polydipsia=No    -1.0256623260332474
+    Attrib Gender=Female    -0.21140216857984226
+    Attrib sudden weight loss=Yes    1.3174012929943304
+    Attrib partial paresis=Yes    -0.014924557394140572
+    Attrib Polyphagia=Yes    1.9361307966982924
+    Attrib Irritability=Yes    1.6251186709176204
+    Attrib Alopecia=No    0.10562497872812282
+    Attrib visual blurring=Yes    -0.6276013776408724
+    Attrib weakness=No    -0.16625350214767298
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    0.7680523615793715
+    Attrib Polyuria=Yes    3.218727423935579
+    Attrib Polydipsia=No    0.4328066251781003
+    Attrib Gender=Female    4.077506533105781
+    Attrib sudden weight loss=Yes    0.6291722548857039
+    Attrib partial paresis=Yes    -0.8619591979732373
+    Attrib Polyphagia=Yes    2.7359093141867796
+    Attrib Irritability=Yes    -0.6801457213321283
+    Attrib Alopecia=No    4.688884493453355
+    Attrib visual blurring=Yes    -0.39620478034305495
+    Attrib weakness=No    -1.1069900164026443
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -3.3185529783881114
+    Attrib Polyuria=Yes    0.7980379617622165
+    Attrib Polydipsia=No    -0.13147127791396884
+    Attrib Gender=Female    1.5061003764166798
+    Attrib sudden weight loss=Yes    -0.21900100652769405
+    Attrib partial paresis=Yes    4.423368019005159
+    Attrib Polyphagia=Yes    0.9484971561419109
+    Attrib Irritability=Yes    -0.6340234234499003
+    Attrib Alopecia=No    -3.3542216295924776
+    Attrib visual blurring=Yes    3.0443034503124267
+    Attrib weakness=No    0.3648686601188391
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -2.8633370847092263
+    Attrib Polyuria=Yes    -1.8434872052272695
+    Attrib Polydipsia=No    -0.6871414205691022
+    Attrib Gender=Female    2.449951573961283
+    Attrib sudden weight loss=Yes    -0.19741676488659934
+    Attrib partial paresis=Yes    -1.3379972341702766
+    Attrib Polyphagia=Yes    -0.010448669276395366
+    Attrib Irritability=Yes    -1.543242528925048
+    Attrib Alopecia=No    -4.400410301841208
+    Attrib visual blurring=Yes    -1.8558095206715612
+    Attrib weakness=No    1.9149189694003363
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -1.7611764702847308
+    Attrib Polyuria=Yes    2.9353606365158402
+    Attrib Polydipsia=No    -3.002557686549097
+    Attrib Gender=Female    -1.9160536305891667
+    Attrib sudden weight loss=Yes    1.812363123709327
+    Attrib partial paresis=Yes    -2.540788589783522
+    Attrib Polyphagia=Yes    -0.8181878250853513
+    Attrib Irritability=Yes    -0.7496978864916527
+    Attrib Alopecia=No    -1.75550116083897
+    Attrib visual blurring=Yes    -3.6863590884377104
+    Attrib weakness=No    -1.492975552965218
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -1.956598616030612
+    Attrib Polyuria=Yes    0.1533345096936568
+    Attrib Polydipsia=No    -1.3135536232497116
+    Attrib Gender=Female    2.3798641246212737
+    Attrib sudden weight loss=Yes    1.9343478531470588
+    Attrib partial paresis=Yes    0.16994796344288304
+    Attrib Polyphagia=Yes    3.273741522385376
+    Attrib Irritability=Yes    1.6665031112695339
+    Attrib Alopecia=No    1.0649931472411622
+    Attrib visual blurring=Yes    0.7466117785189256
+    Attrib weakness=No    -1.5744717138460465
+Class Positive
+    Input
+    Node 0
+Class Negative
+    Input
+    Node 1
+
+
+Time taken to build model: 0.92 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         491               94.4231 %
+Incorrectly Classified Instances        29                5.5769 %
+Kappa statistic                          0.8827
+Mean absolute error                      0.0637
+Root mean squared error                  0.2206
+Relative absolute error                 13.4433 %
+Root relative squared error             45.345  %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,947    0,060    0,962      0,947    0,954      0,883    0,969     0,984     Positive
+                 0,940    0,053    0,917      0,940    0,928      0,883    0,969     0,915     Negative
+Weighted Avg.    0,944    0,057    0,945      0,944    0,944      0,883    0,969     0,957     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 303  17 |   a = Positive
+  12 188 |   b = Negative
+

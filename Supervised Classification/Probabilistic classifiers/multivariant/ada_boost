@@ -1,0 +1,149 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(2): class partial paresis 
+Polyuria(2): class sudden weight loss 
+Polydipsia(2): class Polyuria 
+sudden weight loss(2): class 
+Irritability(2): class Gender 
+partial paresis(2): class Polydipsia 
+class(2): 
+LogScore Bayes: -1954.4035093265452
+LogScore BDeu: -1988.2430958589916
+LogScore MDL: -1990.1286304992318
+LogScore ENTROPY: -1918.2095991661138
+LogScore AIC: -1941.209599166114
+
+
+Weight: 2.06
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(2): class sudden weight loss 
+Polyuria(2): class 
+Polydipsia(2): class Polyuria 
+sudden weight loss(1): class Polyuria 
+Irritability(1): class Gender 
+partial paresis(1): class Gender 
+class(2): 
+LogScore Bayes: -1247.8055456301977
+LogScore BDeu: -1257.6656837309263
+LogScore MDL: -1259.3763984495895
+LogScore ENTROPY: -1231.2341687974995
+LogScore AIC: -1240.2341687974995
+
+
+Weight: 1.1
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(1): class 
+Polyuria(2): class Gender 
+Polydipsia(1): class Gender 
+sudden weight loss(1): class Gender 
+Irritability(1): class Gender 
+partial paresis(1): class Gender 
+class(2): 
+LogScore Bayes: -682.9857445199232
+LogScore BDeu: -684.7036449611674
+LogScore MDL: -685.3194213558378
+LogScore ENTROPY: -675.9386781384746
+LogScore AIC: -678.9386781384746
+
+
+Weight: 0.47
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(1): class 
+Polyuria(2): class Gender 
+Polydipsia(1): class Gender 
+sudden weight loss(1): class Gender 
+Irritability(1): class Gender 
+partial paresis(1): class Gender 
+class(2): 
+LogScore Bayes: -686.8722572581025
+LogScore BDeu: -688.5901576993467
+LogScore MDL: -689.1526586565625
+LogScore ENTROPY: -679.7719154391992
+LogScore AIC: -682.7719154391992
+
+
+Weight: 0.55
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Gender(1): class 
+Polyuria(1): class Gender 
+Polydipsia(1): class Gender 
+sudden weight loss(1): class Gender 
+Irritability(1): class Gender 
+partial paresis(1): class Gender 
+class(2): 
+LogScore Bayes: -361.9416460113813
+LogScore BDeu: -361.9416460113813
+LogScore MDL: -362.41207435882285
+LogScore ENTROPY: -359.28515995303513
+LogScore AIC: -360.28515995303513
+
+
+Weight: 0.17
+
+Number of performed Iterations: 5
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         457               87.8846 %
+Incorrectly Classified Instances        63               12.1154 %
+Kappa statistic                          0.7476
+Mean absolute error                      0.1417
+Root mean squared error                  0.3034
+Relative absolute error                 29.9273 %
+Root relative squared error             62.3532 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,878    0,120    0,921      0,878    0,899      0,749    0,944     0,959     Positive
+                 0,880    0,122    0,819      0,880    0,848      0,749    0,944     0,883     Negative
+Weighted Avg.    0,879    0,121    0,882      0,879    0,880      0,749    0,944     0,930     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 281  39 |   a = Positive
+  24 176 |   b = Negative
+

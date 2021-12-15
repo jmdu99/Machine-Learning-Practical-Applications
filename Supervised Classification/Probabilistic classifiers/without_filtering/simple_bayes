@@ -1,0 +1,158 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.61)   (0.39)
+=======================================
+Age
+  mean                  0.4477   0.4091
+  std. dev.             0.1627   0.1639
+  weight sum               320      200
+  precision               0.02     0.02
+
+Gender
+  mean                  0.5406    0.095
+  std. dev.             0.4983   0.2932
+  weight sum               320      200
+  precision                  1        1
+
+Polyuria
+  mean                  0.7594    0.075
+  std. dev.             0.4275   0.2634
+  weight sum               320      200
+  precision                  1        1
+
+Polydipsia
+  mean                  0.7031     0.04
+  std. dev.             0.4569    0.196
+  weight sum               320      200
+  precision                  1        1
+
+sudden weight loss
+  mean                  0.5875    0.145
+  std. dev.             0.4923   0.3521
+  weight sum               320      200
+  precision                  1        1
+
+weakness
+  mean                  0.6813    0.435
+  std. dev.              0.466   0.4958
+  weight sum               320      200
+  precision                  1        1
+
+Polyphagia
+  mean                  0.5906     0.24
+  std. dev.             0.4917   0.4271
+  weight sum               320      200
+  precision                  1        1
+
+Genital thrush
+  mean                  0.2594    0.165
+  std. dev.             0.4383   0.3712
+  weight sum               320      200
+  precision                  1        1
+
+visual blurring
+  mean                  0.5469     0.29
+  std. dev.             0.4978   0.4538
+  weight sum               320      200
+  precision                  1        1
+
+Itching
+  mean                  0.4813    0.495
+  std. dev.             0.4996      0.5
+  weight sum               320      200
+  precision                  1        1
+
+Irritability
+  mean                  0.3438     0.08
+  std. dev.              0.475   0.2713
+  weight sum               320      200
+  precision                  1        1
+
+delayed healing
+  mean                  0.4781     0.43
+  std. dev.             0.4995   0.4951
+  weight sum               320      200
+  precision                  1        1
+
+partial paresis
+  mean                     0.6     0.16
+  std. dev.             0.4899   0.3666
+  weight sum               320      200
+  precision                  1        1
+
+muscle stiffness
+  mean                  0.4219      0.3
+  std. dev.             0.4939   0.4583
+  weight sum               320      200
+  precision                  1        1
+
+Alopecia
+  mean                  0.2437    0.505
+  std. dev.             0.4293      0.5
+  weight sum               320      200
+  precision                  1        1
+
+Obesity
+  mean                  0.1906    0.135
+  std. dev.             0.3928   0.3417
+  weight sum               320      200
+  precision                  1        1
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         455               87.5    %
+Incorrectly Classified Instances        65               12.5    %
+Kappa statistic                          0.7406
+Mean absolute error                      0.1419
+Root mean squared error                  0.3121
+Relative absolute error                 29.9673 %
+Root relative squared error             64.1493 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,869    0,115    0,924      0,869    0,895      0,743    0,951     0,971     Positive
+                 0,885    0,131    0,808      0,885    0,845      0,743    0,951     0,919     Negative
+Weighted Avg.    0,875    0,121    0,879      0,875    0,876      0,743    0,951     0,951     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 278  42 |   a = Positive
+  23 177 |   b = Negative
+

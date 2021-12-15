@@ -1,0 +1,219 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Polyuria <= 0
+|   Polydipsia <= 0
+|   |   Gender <= 0: LM_1:3/12 (171)
+|   |   Gender > 0: LM_2:3/12 (51)
+|   Polydipsia > 0: LM_3:3/9 (40)
+Polyuria > 0
+|   Polydipsia <= 0
+|   |   Gender <= 0
+|   |   |   sudden weight loss <= 0
+|   |   |   |   partial paresis <= 0: LM_4:3/18 (12)
+|   |   |   |   partial paresis > 0: LM_5:3/18 (15)
+|   |   |   sudden weight loss > 0: LM_6:3/15 (22)
+|   |   Gender > 0: LM_7:3/12 (16)
+|   Polydipsia > 0: LM_8:3/9 (193)
+
+Number of Leaves  : 	8
+
+Size of the Tree : 	15
+
+
+
+LM_1:
+Class Positive :
+-1.67 + 
+[Gender] * 1.45 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.49 +
+[sudden weight loss] * 0.42 +
+[Irritability] * 1.25 +
+[partial paresis] * 0.3 
+
+Class Negative :
+1.67 + 
+[Gender] * -1.45 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.49 +
+[sudden weight loss] * -0.42 +
+[Irritability] * -1.25 +
+[partial paresis] * -0.3
+
+LM_2:
+Class Positive :
+-1.68 + 
+[Gender] * 1.45 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.49 +
+[sudden weight loss] * 1.06 +
+[Irritability] * -0.75 +
+[partial paresis] * 1.08
+
+Class Negative :
+1.68 + 
+[Gender] * -1.45 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.49 +
+[sudden weight loss] * -1.06 +
+[Irritability] * 0.75 +
+[partial paresis] * -1.08
+
+LM_3:
+Class Positive :
+-1.22 + 
+[Gender] * 1.45 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 1.49 +
+[Irritability] * 2.09 +
+[partial paresis] * -0.5
+
+Class Negative :
+1.22 + 
+[Gender] * -1.45 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -1.49 +
+[Irritability] * -2.09 +
+[partial paresis] * 0.5 
+
+
+
+
+
+LM_4:
+Class Positive :
+0.85 + 
+[Gender] * 1.55 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 2    +
+[sudden weight loss] * 0.6  +
+[Irritability] * -2.29 +
+[partial paresis] * -0.24
+
+Class Negative :
+-0.85 + 
+[Gender] * -1.55 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -2 +
+[sudden weight loss] * -0.6 +
+[Irritability] * 2.29 +
+[partial paresis] * 0.24
+
+LM_5:
+Class Positive :
+-1.34 + 
+[Gender] * 1.55 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 2    +
+[sudden weight loss] * 0.6  +
+[Irritability] * 2.39 +
+[partial paresis] * -0.24
+
+Class Negative :
+1.34 + 
+[Gender] * -1.55 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -2 +
+[sudden weight loss] * -0.6 +
+[Irritability] * -2.39 +
+[partial paresis] * 0.24
+
+LM_6:
+Class Positive :
+-2.08 + 
+[Gender] * 1.55 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 2    +
+[sudden weight loss] * 0.6  +
+[Irritability] * 1.41 +
+[partial paresis] * 1.85
+
+Class Negative :
+2.08 + 
+[Gender] * -1.55 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -2 +
+[sudden weight loss] * -0.6 +
+[Irritability] * -1.41 +
+[partial paresis] * -1.85
+
+LM_7:
+Class Positive :
+0.13 + 
+[Gender] * 1.55 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 2    +
+[sudden weight loss] * 0.49 +
+[Irritability] * 0.46 +
+[partial paresis] * 0.26
+
+Class Negative :
+-0.13 + 
+[Gender] * -1.55 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -2 +
+[sudden weight loss] * -0.49 +
+[Irritability] * -0.46 +
+[partial paresis] * -0.26
+
+LM_8:
+Class Positive :
+0.46 + 
+[Gender] * 1.02 +
+[Polyuria] * 1.3  +
+[Polydipsia] * 2    +
+[sudden weight loss] * 0.48
+
+Class Negative :
+-0.46 + 
+[Gender] * -1.02 +
+[Polyuria] * -1.3 +
+[Polydipsia] * -2 +
+[sudden weight loss] * -0.48
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         461               88.6538 %
+Incorrectly Classified Instances        59               11.3462 %
+Kappa statistic                          0.7596
+Mean absolute error                      0.1432
+Root mean squared error                  0.2694
+Relative absolute error                 30.2479 %
+Root relative squared error             55.3835 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,913    0,155    0,904      0,913    0,908      0,760    0,962     0,979     Positive
+                 0,845    0,088    0,858      0,845    0,851      0,760    0,962     0,904     Negative
+Weighted Avg.    0,887    0,129    0,886      0,887    0,886      0,760    0,962     0,950     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 292  28 |   a = Positive
+  31 169 |   b = Negative
+

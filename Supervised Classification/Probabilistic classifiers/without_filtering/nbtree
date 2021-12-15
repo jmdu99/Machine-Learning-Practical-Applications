@@ -1,0 +1,907 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.NBTree 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+NBTree
+------------------
+
+delayed healing <= 0.5
+|   muscle stiffness <= 0.5
+|   |   Gender <= 0.5
+|   |   |   Polyuria <= 0.5
+|   |   |   |   partial paresis <= 0.5: NB 5
+|   |   |   |   partial paresis > 0.5: NB 6
+|   |   |   Polyuria > 0.5: NB 7
+|   |   Gender > 0.5: NB 8
+|   muscle stiffness > 0.5: NB 9
+delayed healing > 0.5
+|   sudden weight loss <= 0.5
+|   |   visual blurring <= 0.5: NB 12
+|   |   visual blurring > 0.5
+|   |   |   Gender <= 0.5
+|   |   |   |   Polyuria <= 0.5: NB 15
+|   |   |   |   Polyuria > 0.5: NB 16
+|   |   |   Gender > 0.5: NB 17
+|   sudden weight loss > 0.5
+|   |   Alopecia <= 0.5: NB 19
+|   |   Alopecia > 0.5: NB 20
+
+Leaf number: 5 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.08)   (0.92)
+=======================================
+Age
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Gender
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Polyuria
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Polydipsia
+  '(-inf-0.5]'             1.0     87.0
+  '(0.5-inf)'              8.0      1.0
+  [total]                  9.0     88.0
+
+sudden weight loss
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+weakness
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Polyphagia
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Genital thrush
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+visual blurring
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Itching
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Irritability
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+delayed healing
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+partial paresis
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+muscle stiffness
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Alopecia
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+Obesity
+  'All'                    8.0     87.0
+  [total]                  8.0     87.0
+
+
+
+Leaf number: 6 Naive Bayes Classifier
+
+                         Class
+Attribute             Positive Negative
+                        (0.46)   (0.54)
+========================================
+Age
+  '(-inf-0.506757]'         1.0      7.0
+  '(0.506757-inf)'          6.0      1.0
+  [total]                   7.0      8.0
+
+Gender
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Polyuria
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Polydipsia
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+sudden weight loss
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+weakness
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Polyphagia
+  '(-inf-0.5]'              2.0      7.0
+  '(0.5-inf)'               5.0      1.0
+  [total]                   7.0      8.0
+
+Genital thrush
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+visual blurring
+  '(-inf-0.5]'              2.0      7.0
+  '(0.5-inf)'               5.0      1.0
+  [total]                   7.0      8.0
+
+Itching
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Irritability
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+delayed healing
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+partial paresis
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+muscle stiffness
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Alopecia
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+Obesity
+  'All'                     6.0      7.0
+  [total]                   6.0      7.0
+
+
+
+Leaf number: 7 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.98)   (0.02)
+=======================================
+Age
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Gender
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Polyuria
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Polydipsia
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+sudden weight loss
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+weakness
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Polyphagia
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Genital thrush
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+visual blurring
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Itching
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Irritability
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+delayed healing
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+partial paresis
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+muscle stiffness
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Alopecia
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+Obesity
+  'All'                   48.0      1.0
+  [total]                 48.0      1.0
+
+
+
+Leaf number: 8 Naive Bayes Classifier
+
+                         Class
+Attribute             Positive Negative
+                        (0.88)   (0.12)
+========================================
+Age
+  '(-inf-0.141892]'         2.0      1.0
+  '(0.141892-0.25]'         1.0      6.0
+  '(0.25-inf)'             50.0      2.0
+  [total]                  53.0      9.0
+
+Gender
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Polyuria
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Polydipsia
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+sudden weight loss
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+weakness
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Polyphagia
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Genital thrush
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+visual blurring
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Itching
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Irritability
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+delayed healing
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+partial paresis
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+muscle stiffness
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Alopecia
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+Obesity
+  'All'                    51.0      7.0
+  [total]                  51.0      7.0
+
+
+
+Leaf number: 9 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.78)   (0.22)
+=======================================
+Age
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Gender
+  '(-inf-0.5]'            24.0     17.0
+  '(0.5-inf)'             36.0      1.0
+  [total]                 60.0     18.0
+
+Polyuria
+  '(-inf-0.5]'            17.0     17.0
+  '(0.5-inf)'             43.0      1.0
+  [total]                 60.0     18.0
+
+Polydipsia
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+sudden weight loss
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+weakness
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Polyphagia
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Genital thrush
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+visual blurring
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Itching
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Irritability
+  '(-inf-0.5]'            37.0     17.0
+  '(0.5-inf)'             23.0      1.0
+  [total]                 60.0     18.0
+
+delayed healing
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+partial paresis
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+muscle stiffness
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Alopecia
+  'All'                   59.0     17.0
+  [total]                 59.0     17.0
+
+Obesity
+  '(-inf-0.5]'            35.0     17.0
+  '(0.5-inf)'             25.0      1.0
+  [total]                 60.0     18.0
+
+
+
+Leaf number: 12 Naive Bayes Classifier
+
+                         Class
+Attribute             Positive Negative
+                        (0.44)   (0.56)
+========================================
+Age
+  '(-inf-0.351352]'        14.0      1.0
+  '(0.351352-inf)'         12.0     32.0
+  [total]                  26.0     33.0
+
+Gender
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+Polyuria
+  '(-inf-0.5]'             11.0     32.0
+  '(0.5-inf)'              15.0      1.0
+  [total]                  26.0     33.0
+
+Polydipsia
+  '(-inf-0.5]'              9.0     32.0
+  '(0.5-inf)'              17.0      1.0
+  [total]                  26.0     33.0
+
+sudden weight loss
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+weakness
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+Polyphagia
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+Genital thrush
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+visual blurring
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+Itching
+  '(-inf-0.5]'             17.0      1.0
+  '(0.5-inf)'               9.0     32.0
+  [total]                  26.0     33.0
+
+Irritability
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+delayed healing
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+partial paresis
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+muscle stiffness
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+Alopecia
+  '(-inf-0.5]'             14.0      2.0
+  '(0.5-inf)'              12.0     31.0
+  [total]                  26.0     33.0
+
+Obesity
+  'All'                    25.0     32.0
+  [total]                  25.0     32.0
+
+
+
+Leaf number: 15 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.17)   (0.83)
+=======================================
+Age
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Gender
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Polyuria
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Polydipsia
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+sudden weight loss
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+weakness
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Polyphagia
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Genital thrush
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+visual blurring
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Itching
+  '(-inf-0.5]'             5.0      1.0
+  '(0.5-inf)'              1.0     24.0
+  [total]                  6.0     25.0
+
+Irritability
+  '(-inf-0.5]'             1.0     20.0
+  '(0.5-inf)'              5.0      5.0
+  [total]                  6.0     25.0
+
+delayed healing
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+partial paresis
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+muscle stiffness
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Alopecia
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+Obesity
+  'All'                    5.0     24.0
+  [total]                  5.0     24.0
+
+
+
+Leaf number: 16 Naive Bayes Classifier
+
+                         Class
+Attribute             Positive Negative
+                        (0.43)   (0.57)
+========================================
+Age
+  '(-inf-0.641892]'         9.0      1.0
+  '(0.641892-inf)'          1.0     12.0
+  [total]                  10.0     13.0
+
+Gender
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Polyuria
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Polydipsia
+  '(-inf-0.5]'              4.0     12.0
+  '(0.5-inf)'               6.0      1.0
+  [total]                  10.0     13.0
+
+sudden weight loss
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+weakness
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Polyphagia
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Genital thrush
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+visual blurring
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Itching
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Irritability
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+delayed healing
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+partial paresis
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+muscle stiffness
+  '(-inf-0.5]'              8.0      1.0
+  '(0.5-inf)'               2.0     12.0
+  [total]                  10.0     13.0
+
+Alopecia
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+Obesity
+  'All'                     9.0     12.0
+  [total]                   9.0     12.0
+
+
+
+Leaf number: 17 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.69)   (0.31)
+=======================================
+Age
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Gender
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Polyuria
+  '(-inf-0.5]'             4.0      9.0
+  '(0.5-inf)'             17.0      1.0
+  [total]                 21.0     10.0
+
+Polydipsia
+  '(-inf-0.5]'             1.0      9.0
+  '(0.5-inf)'             20.0      1.0
+  [total]                 21.0     10.0
+
+sudden weight loss
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+weakness
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Polyphagia
+  '(-inf-0.5]'             4.0      9.0
+  '(0.5-inf)'             17.0      1.0
+  [total]                 21.0     10.0
+
+Genital thrush
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+visual blurring
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Itching
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Irritability
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+delayed healing
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+partial paresis
+  '(-inf-0.5]'             1.0      9.0
+  '(0.5-inf)'             20.0      1.0
+  [total]                 21.0     10.0
+
+muscle stiffness
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+Alopecia
+  '(-inf-0.5]'            20.0      1.0
+  '(0.5-inf)'              1.0      9.0
+  [total]                 21.0     10.0
+
+Obesity
+  'All'                   20.0      9.0
+  [total]                 20.0      9.0
+
+
+
+Leaf number: 19 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.99)   (0.01)
+=======================================
+Age
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Gender
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Polyuria
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Polydipsia
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+sudden weight loss
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+weakness
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Polyphagia
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Genital thrush
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+visual blurring
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Itching
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Irritability
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+delayed healing
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+partial paresis
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+muscle stiffness
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Alopecia
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+Obesity
+  'All'                   84.0      1.0
+  [total]                 84.0      1.0
+
+
+
+Leaf number: 20 Naive Bayes Classifier
+
+                         Class
+Attribute             Positive Negative
+                        (0.53)   (0.47)
+========================================
+Age
+  '(-inf-0.554055]'         7.0     14.0
+  '(0.554055-inf)'         10.0      1.0
+  [total]                  17.0     15.0
+
+Gender
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Polyuria
+  '(-inf-0.5]'              1.0     10.0
+  '(0.5-inf)'              16.0      5.0
+  [total]                  17.0     15.0
+
+Polydipsia
+  '(-inf-0.5]'              7.0     14.0
+  '(0.5-inf)'              10.0      1.0
+  [total]                  17.0     15.0
+
+sudden weight loss
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+weakness
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Polyphagia
+  '(-inf-0.5]'              2.0     11.0
+  '(0.5-inf)'              15.0      4.0
+  [total]                  17.0     15.0
+
+Genital thrush
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+visual blurring
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Itching
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Irritability
+  '(-inf-0.5]'              5.0     14.0
+  '(0.5-inf)'              12.0      1.0
+  [total]                  17.0     15.0
+
+delayed healing
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+partial paresis
+  '(-inf-0.5]'              9.0     14.0
+  '(0.5-inf)'               8.0      1.0
+  [total]                  17.0     15.0
+
+muscle stiffness
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Alopecia
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+Obesity
+  'All'                    16.0     14.0
+  [total]                  16.0     14.0
+
+
+
+
+Number of Leaves  : 	11
+
+Size of the tree : 	21
+
+
+Time taken to build model: 0.86 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         506               97.3077 %
+Incorrectly Classified Instances        14                2.6923 %
+Kappa statistic                          0.9433
+Mean absolute error                      0.0723
+Root mean squared error                  0.1729
+Relative absolute error                 15.2721 %
+Root relative squared error             35.5291 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,972    0,025    0,984      0,972    0,978      0,943    0,989     0,992     Positive
+                 0,975    0,028    0,956      0,975    0,965      0,943    0,989     0,985     Negative
+Weighted Avg.    0,973    0,026    0,973      0,973    0,973      0,943    0,989     0,989     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 311   9 |   a = Positive
+   5 195 |   b = Negative
+

@@ -1,0 +1,629 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 50 -S 1 -I 20 -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    520
+Attributes:   17
+              Age
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              weakness
+              Polyphagia
+              Genital thrush
+              visual blurring
+              Itching
+              Irritability
+              delayed healing
+              partial paresis
+              muscle stiffness
+              Alopecia
+              Obesity
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(1): class Gender 
+Gender(2): class Alopecia 
+Polyuria(2): class Polydipsia 
+Polydipsia(2): class weakness 
+sudden weight loss(2): class Polyuria 
+weakness(2): class 
+Polyphagia(2): class visual blurring 
+Genital thrush(1): class Age 
+visual blurring(2): class weakness 
+Itching(1): class Age 
+Irritability(2): class Alopecia 
+delayed healing(1): class Age 
+partial paresis(2): class visual blurring 
+muscle stiffness(1): class Age 
+Alopecia(2): class weakness 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -3188.0164380951824
+LogScore BDeu: -3247.55337350059
+LogScore MDL: -3244.5403137978346
+LogScore ENTROPY: -3122.590651972114
+LogScore AIC: -3161.590651972114
+
+
+Weight: 2.26
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(16): class visual blurring 
+Gender(1): class Age 
+Polyuria(2): class 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(2): class Age 
+Genital thrush(2): class Polyuria 
+visual blurring(2): class muscle stiffness 
+Itching(2): class Polyuria 
+Irritability(2): class Age 
+delayed healing(2): class Age 
+partial paresis(2): class Age 
+muscle stiffness(2): class Itching 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -1369.755713123898
+LogScore BDeu: -2129.57640725879
+LogScore MDL: -1870.7247698041567
+LogScore ENTROPY: -1467.9213689497071
+LogScore AIC: -1674.9213689497074
+
+
+Weight: 1.1
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(3): class Polyuria 
+Gender(2): class Alopecia 
+Polyuria(2): class Polyphagia 
+Polydipsia(2): class Polyphagia 
+sudden weight loss(2): class Polyuria 
+weakness(1): class Age 
+Polyphagia(2): class 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(2): class Polydipsia 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -1761.8410477406587
+LogScore BDeu: -1812.4846036428698
+LogScore MDL: -1815.284643044107
+LogScore ENTROPY: -1727.7255423526085
+LogScore AIC: -1758.7255423526085
+
+
+Weight: 1.64
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(2): class partial paresis 
+Gender(1): class Age 
+Polyuria(2): class Itching 
+Polydipsia(1): class Age 
+sudden weight loss(2): class visual blurring 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class 
+Itching(2): class muscle stiffness 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(2): class visual blurring 
+muscle stiffness(2): class visual blurring 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -873.9921928964028
+LogScore BDeu: -914.2561166470897
+LogScore MDL: -906.7912986757096
+LogScore ENTROPY: -850.858979869424
+LogScore AIC: -877.858979869424
+
+
+Weight: 0.92
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(1): class Polyuria 
+Gender(1): class Age 
+Polyuria(2): class Polyphagia 
+Polydipsia(2): class partial paresis 
+sudden weight loss(2): class Polyuria 
+weakness(1): class Age 
+Polyphagia(2): class 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(2): class Polyuria 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -1338.2405497015616
+LogScore BDeu: -1365.6557990157676
+LogScore MDL: -1360.122876033113
+LogScore ENTROPY: -1308.8403303686941
+LogScore AIC: -1327.8403303686941
+
+
+Weight: 0.98
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(6): class Polyuria 
+Gender(1): class Age 
+Polyuria(2): class 
+Polydipsia(1): class Age 
+sudden weight loss(2): class Polyphagia 
+weakness(1): class Age 
+Polyphagia(2): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class muscle stiffness 
+Itching(2): class Polyuria 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(2): class Itching 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -930.8470228271887
+LogScore BDeu: -1050.5610238845566
+LogScore MDL: -1025.018636319539
+LogScore ENTROPY: -925.7772187177181
+LogScore AIC: -976.7772187177181
+
+
+Weight: 0.53
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(11): class Itching 
+Gender(1): class Age 
+Polyuria(2): class 
+Polydipsia(1): class Age 
+sudden weight loss(2): class Polyphagia 
+weakness(1): class Age 
+Polyphagia(2): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(2): class Polyuria 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -1035.2406825311518
+LogScore BDeu: -1274.547241967054
+LogScore MDL: -1206.5417057690283
+LogScore ENTROPY: -1054.1765704178374
+LogScore AIC: -1127.1765704178374
+
+
+Weight: 0.87
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(5): class 
+Gender(1): class Age 
+Polyuria(2): class Age 
+Polydipsia(2): class visual blurring 
+sudden weight loss(2): class Polyuria 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class sudden weight loss 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(2): class Polyuria 
+partial paresis(2): class visual blurring 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -1352.0729463875002
+LogScore BDeu: -1425.8259040670926
+LogScore MDL: -1411.7447177969343
+LogScore ENTROPY: -1320.443158868012
+LogScore AIC: -1359.4431588680118
+
+
+Weight: 1.56
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(2): class muscle stiffness 
+Gender(2): class Itching 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class muscle stiffness 
+Itching(2): class visual blurring 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(2): class 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -851.8079320801635
+LogScore BDeu: -879.2231813943696
+LogScore MDL: -871.822758623866
+LogScore ENTROPY: -830.9341402384264
+LogScore AIC: -849.9341402384264
+
+
+Weight: 0.75
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(6): class Gender 
+Gender(2): class sudden weight loss 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(2): class 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -794.0123703285178
+LogScore BDeu: -861.7680170384047
+LogScore MDL: -845.7330873741531
+LogScore ENTROPY: -787.0917141791285
+LogScore AIC: -814.0917141791285
+
+
+Weight: 0.51
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(1): class 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(2): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(2): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(2): class Genital thrush 
+class(2): 
+LogScore Bayes: -543.5774443023298
+LogScore BDeu: -553.4375824030585
+LogScore MDL: -551.4022198937697
+LogScore ENTROPY: -530.9097738815674
+LogScore AIC: -539.9097738815674
+
+
+Weight: 1.18
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(9): class weakness 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(2): class Age 
+sudden weight loss(1): class Age 
+weakness(2): class 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(2): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(2): class Age 
+class(2): 
+LogScore Bayes: -987.2635920562052
+LogScore BDeu: -1270.5499033993317
+LogScore MDL: -1184.3565075683352
+LogScore ENTROPY: -1002.9060913145311
+LogScore AIC: -1091.9060913145308
+
+
+Weight: 0.59
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(4): class Itching 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(2): class muscle stiffness 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class 
+Itching(2): class visual blurring 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(2): class visual blurring 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -821.2935148019999
+LogScore BDeu: -871.808603663517
+LogScore MDL: -862.6288235027647
+LogScore ENTROPY: -805.082645162707
+LogScore AIC: -832.082645162707
+
+
+Weight: 0.39
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(2): class Polyuria 
+Gender(1): class Age 
+Polyuria(2): class partial paresis 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(2): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(2): class 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -585.1307259236735
+LogScore BDeu: -606.1216380196389
+LogScore MDL: -605.532505672174
+LogScore ENTROPY: -572.7616467786713
+LogScore AIC: -587.7616467786713
+
+
+Weight: 0.76
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(4): class muscle stiffness 
+Gender(2): class Age 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(2): class Age 
+Genital thrush(1): class Age 
+visual blurring(2): class 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(2): class visual blurring 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -819.2655333600003
+LogScore BDeu: -893.9737877928637
+LogScore MDL: -883.0267911375154
+LogScore ENTROPY: -808.9299273070634
+LogScore AIC: -843.9299273070634
+
+
+Weight: 0.42
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(4): class 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(2): class Gender 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(2): class Gender 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -512.5533690989076
+LogScore BDeu: -526.4208674125792
+LogScore MDL: -527.1953455475873
+LogScore ENTROPY: -503.37631217601245
+LogScore AIC: -514.3763121760124
+
+
+Weight: 0.5
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(3): class 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -270.4827274435234
+LogScore BDeu: -275.96264403532473
+LogScore MDL: -277.01088846300416
+LogScore ENTROPY: -266.5749202882651
+LogScore AIC: -271.5749202882651
+
+
+Weight: 0.32
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(5): class muscle stiffness 
+Gender(2): class muscle stiffness 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(2): class Gender 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(2): class 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -892.8676054232969
+LogScore BDeu: -951.351106846662
+LogScore MDL: -939.3510231708357
+LogScore ENTROPY: -880.0259595827579
+LogScore AIC: -907.0259595827579
+
+
+Weight: 0.44
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+Age(8): class 
+Gender(1): class Age 
+Polyuria(1): class Age 
+Polydipsia(1): class Age 
+sudden weight loss(1): class Age 
+weakness(1): class Age 
+Polyphagia(1): class Age 
+Genital thrush(1): class Age 
+visual blurring(1): class Age 
+Itching(1): class Age 
+Irritability(1): class Age 
+delayed healing(1): class Age 
+partial paresis(1): class Age 
+muscle stiffness(1): class Age 
+Alopecia(1): class Age 
+Obesity(1): class Age 
+class(2): 
+LogScore Bayes: -588.0621223803419
+LogScore BDeu: -625.1771782972926
+LogScore MDL: -615.421427726542
+LogScore ENTROPY: -583.7751199377212
+LogScore AIC: -598.7751199377212
+
+
+Weight: 0.31
+
+Number of performed Iterations: 19
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         493               94.8077 %
+Incorrectly Classified Instances        27                5.1923 %
+Kappa statistic                          0.8904
+Mean absolute error                      0.1049
+Root mean squared error                  0.2143
+Relative absolute error                 22.1457 %
+Root relative squared error             44.052  %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,956    0,065    0,959      0,956    0,958      0,890    0,976     0,977     Positive
+                 0,935    0,044    0,930      0,935    0,933      0,890    0,976     0,970     Negative
+Weighted Avg.    0,948    0,057    0,948      0,948    0,948      0,890    0,976     0,974     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 306  14 |   a = Positive
+  13 187 |   b = Negative
+

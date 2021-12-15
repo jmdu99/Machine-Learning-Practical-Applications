@@ -1,0 +1,126 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.NBTree 
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    520
+Attributes:   7
+              Gender
+              Polyuria
+              Polydipsia
+              sudden weight loss
+              Irritability
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+NBTree
+------------------
+
+Polydipsia <= 0.5: NB 1
+Polydipsia > 0.5: NB 2
+
+Leaf number: 1 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.33)   (0.67)
+=======================================
+Gender
+  '(-inf-0.5]'            48.0    174.0
+  '(0.5-inf)'             49.0     20.0
+  [total]                 97.0    194.0
+
+Polyuria
+  '(-inf-0.5]'            46.0    178.0
+  '(0.5-inf)'             51.0     16.0
+  [total]                 97.0    194.0
+
+Polydipsia
+  'All'                   96.0    193.0
+  [total]                 96.0    193.0
+
+sudden weight loss
+  '(-inf-0.5]'            54.0    167.0
+  '(0.5-inf)'             43.0     27.0
+  [total]                 97.0    194.0
+
+Irritability
+  '(-inf-0.5]'            65.0    177.0
+  '(0.5-inf)'             32.0     17.0
+  [total]                 97.0    194.0
+
+partial paresis
+  '(-inf-0.5]'            57.0    165.0
+  '(0.5-inf)'             40.0     29.0
+  [total]                 97.0    194.0
+
+
+
+Leaf number: 2 Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.96)   (0.04)
+=======================================
+Gender
+  'All'                  226.0      9.0
+  [total]                226.0      9.0
+
+Polyuria
+  '(-inf-0.5]'            33.0      9.0
+  '(0.5-inf)'            194.0      1.0
+  [total]                227.0     10.0
+
+Polydipsia
+  'All'                  226.0      9.0
+  [total]                226.0      9.0
+
+sudden weight loss
+  'All'                  226.0      9.0
+  [total]                226.0      9.0
+
+Irritability
+  'All'                  226.0      9.0
+  [total]                226.0      9.0
+
+partial paresis
+  'All'                  226.0      9.0
+  [total]                226.0      9.0
+
+
+
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         458               88.0769 %
+Incorrectly Classified Instances        62               11.9231 %
+Kappa statistic                          0.7462
+Mean absolute error                      0.1636
+Root mean squared error                  0.2895
+Relative absolute error                 34.5551 %
+Root relative squared error             59.5109 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,916    0,175    0,893      0,916    0,904      0,747    0,951     0,971     Positive
+                 0,825    0,084    0,859      0,825    0,842      0,747    0,951     0,911     Negative
+Weighted Avg.    0,881    0,140    0,880      0,881    0,880      0,747    0,951     0,948     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 293  27 |   a = Positive
+  35 165 |   b = Negative
+

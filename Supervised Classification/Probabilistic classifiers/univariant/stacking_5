@@ -1,0 +1,185 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Stacking -X 10 -M "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4" -S 1 -num-slots 1 -B "weka.classifiers.functions.LDA -R 1.0E-6" -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5"
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R6-16
+Instances:    520
+Attributes:   6
+              Polyuria
+              Polydipsia
+              Gender
+              sudden weight loss
+              partial paresis
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Stacking
+
+Base classifiers
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: -0.027217560517877715
+
+Mean vector:
+
+         5                   5
+         1  4,961538461538e-01
+         2  4,480769230769e-01
+         3  3,692307692308e-01
+         4  4,173076923077e-01
+         5  4,307692307692e-01
+
+Inverse of covariance matrix:
+
+  8,49 -1,85  0,75 -1,34 -1,25
+ -1,85  8,00  0,00 -0,75 -1,18
+  0,75  0,00  5,66 -0,64 -1,02
+ -1,34 -0,75 -0,64  5,52  0,00
+ -1,25 -1,18 -1,02  0,00  5,66
+
+
+
+Estimates for class value Positive
+
+Natural logarithm of class prior probability: -0.49
+Class prior probability: 0.62
+
+Mean vector:
+
+Polyuria: 0.76
+Polydipsia: 0.7
+Gender: 0.54
+sudden weight loss: 0.59
+partial paresis: 0.6
+
+Estimates for class value Negative
+
+Natural logarithm of class prior probability: -0.96
+Class prior probability: 0.38
+
+Mean vector:
+
+Polyuria: 0.07
+Polydipsia: 0.04
+Gender: 0.1
+sudden weight loss: 0.15
+partial paresis: 0.16
+
+
+
+Naive Bayes Classifier
+
+                        Class
+Attribute            Positive Negative
+                       (0.61)   (0.39)
+=======================================
+Polyuria
+  mean                  0.7594    0.075
+  std. dev.             0.4275   0.2634
+  weight sum               320      200
+  precision                  1        1
+
+Polydipsia
+  mean                  0.7031     0.04
+  std. dev.             0.4569    0.196
+  weight sum               320      200
+  precision                  1        1
+
+Gender
+  mean                  0.5406    0.095
+  std. dev.             0.4983   0.2932
+  weight sum               320      200
+  precision                  1        1
+
+sudden weight loss
+  mean                  0.5875    0.145
+  std. dev.             0.4923   0.3521
+  weight sum               320      200
+  precision                  1        1
+
+partial paresis
+  mean                     0.6     0.16
+  std. dev.             0.4899   0.3666
+  weight sum               320      200
+  precision                  1        1
+
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=6 #classindex=5
+Network structure (nodes followed by parents)
+Polyuria(2): class sudden weight loss 
+Polydipsia(2): class Polyuria 
+Gender(2): class partial paresis 
+sudden weight loss(2): class 
+partial paresis(2): class Polydipsia 
+class(2): 
+LogScore Bayes: -1687.0903160343164
+LogScore BDeu: -1714.5055653485224
+LogScore MDL: -1716.202619307557
+LogScore ENTROPY: -1656.79124559759
+LogScore AIC: -1675.79124559759
+
+
+
+
+Meta classifier
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                                   Class
+Variable                                        Positive
+========================================================
+weka.classifiers.functions.LDA-1:Positive         1.3307
+weka.classifiers.functions.LDA-1:Negative        -1.3307
+weka.classifiers.bayes.NaiveBayes-2:Positive     -0.5328
+weka.classifiers.bayes.NaiveBayes-2:Negative      0.5328
+weka.classifiers.bayes.BayesNet-3:Positive        2.7266
+weka.classifiers.bayes.BayesNet-3:Negative       -2.7266
+Intercept                                         0.5235
+
+
+Odds Ratios...
+                                                   Class
+Variable                                        Positive
+========================================================
+weka.classifiers.functions.LDA-1:Positive         3.7836
+weka.classifiers.functions.LDA-1:Negative         0.2643
+weka.classifiers.bayes.NaiveBayes-2:Positive       0.587
+weka.classifiers.bayes.NaiveBayes-2:Negative      1.7036
+weka.classifiers.bayes.BayesNet-3:Positive       15.2803
+weka.classifiers.bayes.BayesNet-3:Negative        0.0654
+
+
+Time taken to build model: 0.16 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         469               90.1923 %
+Incorrectly Classified Instances        51                9.8077 %
+Kappa statistic                          0.7926
+Mean absolute error                      0.1569
+Root mean squared error                  0.2821
+Relative absolute error                 33.1424 %
+Root relative squared error             57.9839 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,130    0,919      0,922    0,920      0,793    0,951     0,973     Positive
+                 0,870    0,078    0,874      0,870    0,872      0,793    0,951     0,882     Negative
+Weighted Avg.    0,902    0,110    0,902      0,902    0,902      0,793    0,951     0,938     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 295  25 |   a = Positive
+  26 174 |   b = Negative
+

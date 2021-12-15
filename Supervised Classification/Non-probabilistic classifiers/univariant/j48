@@ -1,0 +1,93 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.8 -M 2
+Relation:     diabetes_data_upload-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.unsupervised.attribute.Remove-R11-16
+Instances:    520
+Attributes:   11
+              Polyuria=Yes
+              Polydipsia=No
+              Gender=Female
+              sudden weight loss=Yes
+              partial paresis=Yes
+              Polyphagia=Yes
+              Irritability=Yes
+              Alopecia=No
+              visual blurring=Yes
+              weakness=No
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Polyuria=Yes <= 0
+|   Polydipsia=No <= 0
+|   |   Irritability=Yes <= 0
+|   |   |   Gender=Female <= 0
+|   |   |   |   Alopecia=No <= 0: Positive (7.0/1.0)
+|   |   |   |   Alopecia=No > 0
+|   |   |   |   |   visual blurring=Yes <= 0: Positive (4.0/1.0)
+|   |   |   |   |   visual blurring=Yes > 0: Negative (6.0)
+|   |   |   Gender=Female > 0: Positive (5.0)
+|   |   Irritability=Yes > 0: Positive (18.0)
+|   Polydipsia=No > 0
+|   |   Gender=Female <= 0
+|   |   |   Irritability=Yes <= 0: Negative (153.0/6.0)
+|   |   |   Irritability=Yes > 0
+|   |   |   |   partial paresis=Yes <= 0
+|   |   |   |   |   Alopecia=No <= 0: Negative (5.0/1.0)
+|   |   |   |   |   Alopecia=No > 0: Positive (7.0/2.0)
+|   |   |   |   partial paresis=Yes > 0: Negative (6.0/1.0)
+|   |   Gender=Female > 0
+|   |   |   Alopecia=No <= 0: Negative (14.0/1.0)
+|   |   |   Alopecia=No > 0: Positive (37.0/6.0)
+Polyuria=Yes > 0
+|   Polydipsia=No <= 0: Positive (193.0)
+|   Polydipsia=No > 0
+|   |   Alopecia=No <= 0
+|   |   |   Gender=Female <= 0
+|   |   |   |   visual blurring=Yes <= 0
+|   |   |   |   |   Irritability=Yes <= 0
+|   |   |   |   |   |   weakness=No <= 0: Negative (5.0/1.0)
+|   |   |   |   |   |   weakness=No > 0: Positive (4.0)
+|   |   |   |   |   Irritability=Yes > 0: Positive (12.0)
+|   |   |   |   visual blurring=Yes > 0
+|   |   |   |   |   Polyphagia=Yes <= 0: Positive (6.0/1.0)
+|   |   |   |   |   Polyphagia=Yes > 0: Negative (11.0/1.0)
+|   |   |   Gender=Female > 0: Positive (6.0)
+|   |   Alopecia=No > 0: Positive (21.0)
+
+Number of Leaves  : 	19
+
+Size of the tree : 	37
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         489               94.0385 %
+Incorrectly Classified Instances        31                5.9615 %
+Kappa statistic                          0.8751
+Mean absolute error                      0.0916
+Root mean squared error                  0.2385
+Relative absolute error                 19.346  %
+Root relative squared error             49.0135 %
+Total Number of Instances              520     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,938    0,055    0,965      0,938    0,951      0,876    0,948     0,966     Positive
+                 0,945    0,063    0,904      0,945    0,924      0,876    0,948     0,852     Negative
+Weighted Avg.    0,940    0,058    0,941      0,940    0,941      0,876    0,948     0,922     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 300  20 |   a = Positive
+  11 189 |   b = Negative
+
